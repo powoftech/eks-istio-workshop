@@ -1,5 +1,5 @@
 +++
-title = 'The Second Post'
+title = 'Bài Đăng Thứ Hai'
 weight = 2
 +++
 

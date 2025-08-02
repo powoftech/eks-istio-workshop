@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My First Post :: Kubernetes on EKS with Advanced Networking and Service Mesh</title>
+    <title>Posts :: Kubernetes on EKS with Advanced Networking and Service Mesh</title>
     <link>http://localhost:1313/posts/index.html</link>
-    <description>Overall In this lab, you’ll learn the basics and practice of Amazon System Manager - Session Manager . Perform creating public and private instance connections.&#xA;Content Introduction Preparation Connect to EC2 instance Manage session logs Port Forwarding Clean up resources</description>
+    <description></description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Aug 2025 23:27:38 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Post</title>
+      <title>The First Post</title>
       <link>http://localhost:1313/posts/my-first-post/index.html</link>
-      <pubDate>Fri, 01 Aug 2025 23:27:38 +0700</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/my-first-post/index.html</guid>
-      <description>Introduction This is bold text, and this is emphasized text.&#xA;Visit the Hugo website!</description>
+      <description>Introduction</description>
     </item>
     <item>
-      <title>My Second Post</title>
+      <title>The Second Post</title>
       <link>http://localhost:1313/posts/my-second-post/index.html</link>
-      <pubDate>Fri, 01 Aug 2025 23:27:38 +0700</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/my-second-post/index.html</guid>
       <description>Introduction This is bold text, and this is emphasized text.&#xA;Visit the Hugo website!</description>
     </item>

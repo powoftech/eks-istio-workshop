@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kubernetes on EKS with Advanced Networking and Service Mesh</title>
+    <link>http://localhost:1313/index.html</link>
+    <description>Overall In this lab, you’ll learn the basics and practice of Amazon System Manager - Session Manager . Perform creating public and private instance connections.&#xA;Content Introduction Preparation Connect to EC2 instance Manage session logs Port Forwarding Clean up resources</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

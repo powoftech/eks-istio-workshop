@@ -1,3 +1,31 @@
 baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+theme = 'hugo-theme-relearn'
+
+defaultContentLanguage = 'en'
+
+[languages]
+  [languages.en]
+    languageCode = 'en-us'
+    languageName = 'English'
+    title = 'Kubernetes on EKS with Advanced Networking and Service Mesh'
+    weight = 1
+
+  [languages.vi]
+    languageCode = 'vi-vn'
+    languageName = 'Tiếng Việt'
+    title = 'Kubernetes trên EKS với Networking Chuyên sâu và Service Mesh'
+    weight = 2
+
+[params]
+  disableLandingPageButton = true
+  hideAuthorDate = true
+  showVisitedLinks = true
+  themeVariant = "learn"
+
+[menu]
+  [[menu.shortcuts]]
+    pre = '<i class="fa-brands fa-square-facebook"></i> '
+    name = 'AWS Study Group'
+    url = 'https://www.facebook.com/groups/660548818043427'
+    weight = 1
+

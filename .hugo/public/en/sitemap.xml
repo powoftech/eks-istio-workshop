@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/my-first-post/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/posts/my-first-post/index.html" />
-    <xhtml:link rel="alternate" hreflang="en-us" href="http://localhost:1313/posts/my-first-post/index.html" />
-    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/vi/posts/my-first-post/index.html" />
+    <loc>https://example.org/posts/my-first-post/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://example.org/posts/my-first-post/index.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://example.org/posts/my-first-post/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="https://example.org/vi/posts/my-first-post/index.html" />
   </url>
   <url>
-    <loc>http://localhost:1313/posts/my-second-post/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/posts/my-second-post/index.html" />
-    <xhtml:link rel="alternate" hreflang="en-us" href="http://localhost:1313/posts/my-second-post/index.html" />
-    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/vi/posts/my-second-post/index.html" />
+    <loc>https://example.org/posts/my-second-post/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://example.org/posts/my-second-post/index.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://example.org/posts/my-second-post/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="https://example.org/vi/posts/my-second-post/index.html" />
   </url>
   <url>
-    <loc>http://localhost:1313/categories/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/categories/index.html" />
-    <xhtml:link rel="alternate" hreflang="en-us" href="http://localhost:1313/categories/index.html" />
-    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/vi/categories/index.html" />
+    <loc>https://example.org/categories/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://example.org/categories/index.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://example.org/categories/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="https://example.org/vi/categories/index.html" />
   </url>
   <url>
-    <loc>http://localhost:1313/posts/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/posts/index.html" />
-    <xhtml:link rel="alternate" hreflang="en-us" href="http://localhost:1313/posts/index.html" />
-    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/vi/posts/index.html" />
+    <loc>https://example.org/posts/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://example.org/posts/index.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://example.org/posts/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="https://example.org/vi/posts/index.html" />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/tags/index.html" />
-    <xhtml:link rel="alternate" hreflang="en-us" href="http://localhost:1313/tags/index.html" />
-    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/vi/tags/index.html" />
+    <loc>https://example.org/tags/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://example.org/tags/index.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://example.org/tags/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="https://example.org/vi/tags/index.html" />
   </url>
 </urlset>

@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts :: Kubernetes on EKS with Advanced Networking and Service Mesh</title>
-    <link>https://example.org/posts/index.html</link>
+    <link>http://localhost:1313/posts/index.html</link>
     <description>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit…</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The First Post</title>
-      <link>https://example.org/posts/my-first-post/index.html</link>
+      <link>http://localhost:1313/posts/my-first-post/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/my-first-post/index.html</guid>
+      <guid>http://localhost:1313/posts/my-first-post/index.html</guid>
       <description>Lists Unordered Item 1 Item 2 Item 2a Item 2b Item 3a Item 3b Ordered Item 1 Item 2 Item 3 Item 3a Item 3b</description>
     </item>
     <item>
       <title>The Second Post</title>
-      <link>https://example.org/posts/my-second-post/index.html</link>
+      <link>http://localhost:1313/posts/my-second-post/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/my-second-post/index.html</guid>
+      <guid>http://localhost:1313/posts/my-second-post/index.html</guid>
       <description>Introduction # Chào mừng thế giới print(&#34;Hello, World!&#34;)</description>
     </item>
   </channel>

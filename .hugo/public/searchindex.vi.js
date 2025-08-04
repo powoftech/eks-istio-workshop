@@ -9,8 +9,8 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Kubernetes trên EKS với Networking Chuyên sâu và Service Mesh \u003e Bài Viết",
-    "content": "Introduction This is bold text, and this is emphasized text.\nVisit the Hugo website!",
-    "description": "Introduction This is bold text, and this is emphasized text.\nVisit the Hugo website!",
+    "content": "Introduction # Chào mừng thế giới print(\"Hello, World!\")",
+    "description": "Introduction # Chào mừng thế giới print(\"Hello, World!\")",
     "tags": [],
     "title": "Bài Đăng Thứ Hai",
     "uri": "/vi/posts/my-second-post/index.html"

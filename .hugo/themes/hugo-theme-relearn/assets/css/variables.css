@@ -12,7 +12,7 @@
     --INTERNAL-MAIN-BOLD-font-weight: var(--MAIN-BOLD-font-weight, 800);
 
     --INTERNAL-MAIN-TEXT-color: var(--MAIN-TEXT-color, rgba( 16, 16, 16, 1 ));
-    --INTERNAL-MAIN-font: var(--MAIN-font, Roboto, system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif);
+    --INTERNAL-MAIN-font: var(--MAIN-font, system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif);
     --INTERNAL-MAIN-font-weight: var(--MAIN-font-weight, 300);
     --INTERNAL-MAIN-letter-spacing: var(--MAIN-letter-spacing, .014em);
 

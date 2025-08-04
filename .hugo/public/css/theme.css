@@ -1,5 +1,5 @@
 :root {
-    --MAIN-font: system-ui, sans-serif;
+    --MAIN-font: sans-serif;
     --CODE-font: ui-monospace, Menlo, Consolas, Monaco, monospace;
   
     /* initially use section background to avoid flickering on load when a non default variant is active;

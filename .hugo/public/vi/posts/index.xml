@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bài Viết :: Kubernetes trên EKS với Networking Chuyên sâu và Service Mesh</title>
+    <link>http://localhost:1313/vi/posts/index.html</link>
+    <description>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit…</description>
+    <generator>Hugo</generator>
+    <language>vi-vn</language>
+    <atom:link href="http://localhost:1313/vi/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bài Đăng Đầu Tiên</title>
+      <link>http://localhost:1313/vi/posts/my-first-post/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/vi/posts/my-first-post/index.html</guid>
+      <description>Giới Thiệu</description>
+    </item>
+    <item>
+      <title>Bài Đăng Thứ Hai</title>
+      <link>http://localhost:1313/vi/posts/my-second-post/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/vi/posts/my-second-post/index.html</guid>
+      <description>Introduction This is bold text, and this is emphasized text.&#xA;Visit the Hugo website!</description>
+    </item>
+  </channel>
+</rss>

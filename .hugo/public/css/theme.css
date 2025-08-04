@@ -1,5 +1,5 @@
 :root {
-    --MAIN-font: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+    --MAIN-font: system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
     --CODE-font: ui-monospace, Menlo, Consolas, Monaco, monospace;
   
     /* initially use section background to avoid flickering on load when a non default variant is active;

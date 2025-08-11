@@ -2,6 +2,7 @@ module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "~> 6.0"
 
+
   name = "eks-vpc"
   cidr = var.vpc_cidr
 
@@ -10,7 +11,7 @@ module "vpc" {
   public_subnets  = ["10.0.128.0/20", "10.0.144.0/20", "10.0.160.0/20"]
 
   enable_nat_gateway   = true
-  single_nat_gateway   = false # Set to true to save costs in dev, false for prod HA
+  single_nat_gateway   = true # Set to true to save costs in dev, false for prod HA
   enable_dns_hostnames = true
 
   public_subnet_tags = {

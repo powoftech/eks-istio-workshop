@@ -3,15 +3,15 @@ output "vpc_id" {
   value = module.vpc.vpc_id
 }
 
-output "private_subnets" {
+output "vpc_private_subnets" {
   value = module.vpc.private_subnets
 }
 
 # EKS Cluster
-output "cluster_endpoint" {
-  value = module.eks.cluster_endpoint
-}
+# output "cluster_endpoint" {
+#   value = module.eks.cluster_endpoint
+# }
 
-output "cluster_name" {
-  value = module.eks.cluster_name
-}
+# output "cluster_name" {
+#   value = module.eks.cluster_name
+# }

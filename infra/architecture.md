@@ -9,9 +9,9 @@
 
 ## Subnets
 
-- **Private Subnet 1 (AZ a):** 10.0.0.0/19
-- **Private Subnet 2 (AZ b):** 10.0.32.0/19
-- **Private Subnet 3 (AZ c):** 10.0.64.0/19
+- **Private Subnet 1 (AZ a):** 10.0.0.0/20
+- **Private Subnet 2 (AZ b):** 10.0.16.0/20
+- **Private Subnet 3 (AZ c):** 10.0.32.0/20
 
 - **Public Subnet 1 (AZ a):** 10.0.128.0/20
 - **Public Subnet 2 (AZ b):** 10.0.144.0/20

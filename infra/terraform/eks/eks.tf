@@ -14,7 +14,7 @@ module "eks" {
       min_size       = 2
       max_size       = 5
       desired_size   = 3
-      instance_types = ["t2.micro"] # Choose appropriate instance types
+      instance_types = ["a1.medium"] # Choose appropriate instance types
     }
   }
 

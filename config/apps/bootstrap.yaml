@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: root-bootstrap
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/powoftech/eks-istio-workshop.git'
+    targetRevision: HEAD
+    path: config/. # Look at the root of the repo for the /apps directory
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

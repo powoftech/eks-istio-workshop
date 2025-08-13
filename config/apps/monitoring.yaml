@@ -51,3 +51,4 @@ spec:
     # This is important! It allows ArgoCD to create the "monitoring" namespace for you.
     syncOptions:
       - CreateNamespace=true
+      - ServerSideApply=true

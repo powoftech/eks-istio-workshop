@@ -12,3 +12,8 @@ output "eks_cluster_oidc_provider_arn" {
   description = "The ARN of the OIDC Provider for IRSA."
   value       = module.eks.oidc_provider_arn
 }
+
+output "aws_load_balancer_controller_role_arn" {
+  description = "The ARN of the IAM role for the AWS Load Balancer Controller."
+  value       = module.aws_load_balancer_controller_irsa_role.iam_role_arn
+}

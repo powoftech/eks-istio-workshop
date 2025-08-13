@@ -9,8 +9,6 @@ module "vpc" {
   private_subnets            = [for k, v in local.azs : cidrsubnet(local.vpc_cidr, 4, k)]      # /20
   public_subnets             = [for k, v in local.azs : cidrsubnet(local.vpc_cidr, 8, k + 48)] # Public LB /24
   intra_subnets              = [for k, v in local.azs : cidrsubnet(local.vpc_cidr, 8, k + 52)] # EKS interface /24
-  database_subnets           = [for k, v in local.azs : cidrsubnet(local.vpc_cidr, 8, k + 56)] # RDS / Elastic cache /24
-  database_subnet_group_name = "${local.name}-subnet-group"
 
   # Single NAT Gateway for dev
   enable_nat_gateway     = true
@@ -22,9 +20,6 @@ module "vpc" {
   # single_nat_gateway     = false
   # one_nat_gateway_per_az = false
 
-  # enable_dns_hostnames = true
-  # enable_dns_support   = true
-
   # Tags required by EKS
   public_subnet_tags = {
     "kubernetes.io/role/elb" = "1"
@@ -32,8 +27,6 @@ module "vpc" {
 
   private_subnet_tags = {
     "kubernetes.io/role/internal-elb" = "1"
-    # Tags subnets for Karpenter auto-discovery
-    "karpenter.sh/discovery" = "${local.name}-eks"
   }
 
   tags = local.tags

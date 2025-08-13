@@ -1,0 +1,31 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: "https://github.com/powoftech/eks-istio-workshop.git" # <-- IMPORTANT: Change this!
+    targetRevision: HEAD # Or pin to a specific version of ArgoCD manifest
+    path: config/bootstrap/argocd # This path does not exist yet, but we are telling ArgoCD to manage itself from here
+    # We will use a Helm chart for a more robust installation
+    chart: argo-cd
+    helm:
+      releaseName: argocd
+      # Values can be added here to customize the ArgoCD installation
+      values: |
+        server:
+          # Example of customizing the Helm chart via Git
+          # We can change config here instead of using kubectl
+          config:
+            url: "https://argocd.example.com"
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

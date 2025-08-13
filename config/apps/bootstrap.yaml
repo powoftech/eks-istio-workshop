@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: 'https://github.com/powoftech/eks-istio-workshop.git'
     targetRevision: HEAD
-    path: config/. # Look at the root of the repo for the /apps directory
+    path: config # Look at the root of the repo for the /apps directory
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: argocd

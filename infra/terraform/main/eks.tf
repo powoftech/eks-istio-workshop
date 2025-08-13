@@ -5,8 +5,8 @@ module "eks" {
   name               = "${local.name}-cluster"
   kubernetes_version = "1.33"
 
-  # enable_cluster_creator_admin_permissions = true
-  # endpoint_public_access                   = true
+  enable_cluster_creator_admin_permissions = true
+  endpoint_public_access                   = true
   # cloudwatch_log_group_retention_in_days   = 365
 
   addons = {

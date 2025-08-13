@@ -9,7 +9,7 @@ spec:
     # This points to a public Helm chart repository
     repoURL: https://prometheus-community.github.io/helm-charts
     chart: kube-prometheus-stack
-    targetRevision: "58.2.0" # Pin to a specific, recent chart version for stability
+    targetRevision: "76.3.0" # Pin to a specific, recent chart version for stability
     helm:
       # We are customizing the Helm chart directly from Git.
       # This is where the real power lies.

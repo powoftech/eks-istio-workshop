@@ -4,26 +4,16 @@ kind: ClusterConfig
 metadata:
   name: workshop-cluster
   region: us-east-2
-  version: "1.33" # Specify the EKS version
+  version: "1.33"
 
-managedNodeGroups:
-  - name: system-managed-ng
+nodeGroups:
+  - name: ng-1-workers
     instanceType: t2.micro
-    minSize: 1
     desiredCapacity: 2
+    minSize: 1
     maxSize: 3
-    availabilityZones: ["us-east-2a", "us-east-2b", "us-east-2c"]
-    labels:
-      role: worker
-    privateNetworking: true
-
-addonsConfig:
-  autoApplyPodIdentityAssociations: true
-# bear in mind that if either pod identity or IRSA configuration is explicitly set in the config file,
-# or if the addon does not support pod identities,
-# addonsConfig.autoApplyPodIdentityAssociations won't have any effect.
-addons:
-- name: vpc-cni
-- name: coredns
-- name: kube-proxy
-- name: eks-pod-identity-agent
+    # Recommended: Use AWS's Bottlerocket OS for better security and smaller footprint
+    amiFamily: Bottlerocket
+    ssh:
+      allow: true
+      publicKeyPath: workshop-key-us-east-2

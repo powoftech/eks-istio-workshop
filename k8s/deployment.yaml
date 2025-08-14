@@ -1,3 +1,4 @@
+# k8s/deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -16,25 +17,12 @@ spec:
     spec:
       containers:
         - name: workshop-app
-          # IMPORTANT: This is a placeholder. Our pipeline will replace it.
+          # IMPORTANT: The image will be dynamically replaced by the pipeline.
+          # We use a placeholder here.
           image: "IMAGE_PLACEHOLDER"
           ports:
             - containerPort: 8080
-          # --- Security Context ---
-          # This enforces security best practices at the container level.
-          securityContext:
-            # Prevents the container from gaining more privileges than its parent process.
-            allowPrivilegeEscalation: false
-            # Runs the container with a read-only root filesystem.
-            readOnlyRootFilesystem: true
-            # Specifies the user and group IDs to run as, matching our Dockerfile.
-            runAsUser: 1001
-            runAsGroup: 1001
-            # Drops all Linux capabilities and only adds back what's necessary (none in this case).
-            capabilities:
-              drop:
-                - "ALL"
-      # Location for temporary files, as the root filesystem is read-only.
-      volumes:
-        - name: tmp
-          emptyDir: {}
+      # This security context is a good practice, reinforcing our Dockerfile's non-root user.
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1001

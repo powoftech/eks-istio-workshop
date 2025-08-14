@@ -4,7 +4,6 @@ kind: ClusterConfig
 metadata:
   name: workshop-cluster
   region: us-east-2
-  version: "1.33"
 
 nodeGroups:
   - name: ng-1-workers

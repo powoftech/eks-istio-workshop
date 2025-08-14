@@ -14,6 +14,13 @@ nodeGroups:
     maxSize: 3
     # Recommended: Use AWS's Bottlerocket OS for better security and smaller footprint
     amiFamily: Bottlerocket
-    ssh:
-      allow: true
-      publicKeyPath: workshop-key-us-east-2
+    privateNetworking: true
+
+accessConfig:
+  authenticationMode: API_AND_CONFIG_MAP
+  accessEntries:
+    - principalARN: arn:aws:iam::593793056386:role/WorkshopGitHubActionsRole
+      accessPolicies: # optional access polices
+        - policyARN: arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy
+          accessScope:
+            type: cluster

@@ -4,10 +4,11 @@ kind: ClusterConfig
 metadata:
   name: workshop-cluster
   region: us-east-2
+  version: "1.33"
 
 nodeGroups:
   - name: ng-1-workers
-    instanceType: t2.micro
+    instanceType: t3.medium
     desiredCapacity: 2
     minSize: 1
     maxSize: 3

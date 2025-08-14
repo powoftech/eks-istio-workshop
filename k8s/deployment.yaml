@@ -17,7 +17,6 @@ spec:
       containers:
         - name: workshop-app
           # IMPORTANT: This is a placeholder. Our pipeline will replace it.
-
           image: "IMAGE_PLACEHOLDER"
           ports:
             - containerPort: 8080

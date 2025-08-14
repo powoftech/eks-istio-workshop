@@ -9,7 +9,5 @@ spec:
     app: workshop-app
   ports:
     - protocol: TCP
-      # Expose port 80 externally
       port: 80
-      # Route traffic to port 8080 inside the containers
       targetPort: 8080

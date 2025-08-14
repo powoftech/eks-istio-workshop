@@ -2,30 +2,25 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  # The name of your cluster
   name: workshop-cluster
-  # The AWS region where the cluster will be created
-  region: us-east-2 # Or your preferred region from `aws configure`
-  # Tagging is a best practice for cost tracking and resource management
-  tags:
-    project: workshop-pipeline
-    owner: fcj # Change this
+  region: us-east-2
+  version: "1.33" # Specify the EKS version
 
-# This section defines the Kubernetes worker nodes
-nodeGroups:
-  - name: ng-1-workers # Name for the node group
-    # A good general-purpose instance type. Can be covered by Free Tier.
-    instanceType: t3.medium 
-    # Start with 2 nodes for high availability
-    desiredCapacity: 2 
-    # For cost savings, you can scale down to 1 node when not actively testing
+managedNodeGroups:
+  - name: system-managed-ng
+    instanceType: t2.micro
     minSize: 1
-    # Limit max size to prevent accidental cost overruns
-    maxSize: 3 
-    # Recommended: Use AWS's Bottlerocket OS for better security and smaller footprint
-    amiFamily: Bottlerocket 
-    # Good practice to enable SSH access for troubleshooting (optional)
-    # You'll need to have an EC2 Key Pair created in the AWS console for this.
-    # ssh:
-    #   allow: true 
-    #   publicKeyName: your-ec2-keypair-name
+    desiredCapacity: 2
+    maxSize: 3
+    availabilityZones: ["us-east-2a", "us-east-2b", "us-east-2c"]
+    labels:
+      role: worker
+    privateNetworking: true
+
+addons:
+- name: vpc-cni
+  useDefaultPodIdentityAssociations: true
+
+addonsConfig:
+  autoApplyPodIdentityAssociations: true
+

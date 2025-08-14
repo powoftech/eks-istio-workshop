@@ -1,5 +1,3 @@
-# app/Dockerfile
-
 # Stage 1: Use a specific, slim base image to reduce attack surface.
 FROM node:22-slim AS base
 

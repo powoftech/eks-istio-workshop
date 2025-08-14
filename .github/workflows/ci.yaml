@@ -99,7 +99,7 @@ jobs:
           # 3. Apply the updated manifests to the cluster.
           echo "--- Applying deployment.yaml ---"
           cat k8s/deployment.yaml
-          kubectl apply -f k8s/deployment.yaml --validate=false
+          kubectl apply -f k8s/deployment.yaml
 
           echo "--- Applying service.yaml ---"
-          kubectl apply -f k8s/service.yaml --validate=false
+          kubectl apply -f k8s/service.yaml

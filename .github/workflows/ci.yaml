@@ -18,6 +18,8 @@ jobs:
   build-scan-push:
     name: Build, Scan & Push
     runs-on: ubuntu-latest
+    outputs:
+      registry: ${{ steps.login-ecr.outputs.registry }}
     permissions:
       # Required for OIDC connection to AWS
       id-token: write
@@ -59,3 +61,45 @@ jobs:
           ignore-unfixed: true
           vuln-type: "os,library"
           severity: "CRITICAL,HIGH"
+
+  deploy:
+    # This job will only run if the 'build-scan-push' job succeeds
+    needs: build-scan-push
+    name: Deploy to EKS
+    runs-on: ubuntu-latest
+    permissions:
+      # Required for OIDC connection to AWS
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::593793056386:role/GitHubActionsRoleForAmazonECR # <-- USE THE SAME ROLE ARN
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Set up Kubeconfig for EKS
+        run: aws eks update-kubeconfig --name workshop-cluster --region ${{ env.AWS_REGION }}
+
+      - name: Deploy to EKS using kubectl
+        env:
+          ECR_REGISTRY: ${{ needs.build-scan-push.outputs.registry }} # This line is not strictly needed for this version, but good practice
+          IMAGE_TAG: ${{ github.sha }}
+        run: |
+          # 1. Get the ECR registry URL.
+          ECR_URL=$(aws ecr describe-repositories --repository-names ${{ env.ECR_REPOSITORY }} --query "repositories[0].repositoryUri" --output text)
+
+          # 2. Substitute the placeholder in the deployment manifest with the real image URI.
+          sed -i "s|IMAGE_PLACEHOLDER|$ECR_URL:$IMAGE_TAG|g" k8s/deployment.yaml
+
+          # 3. Apply the updated manifests to the cluster.
+          echo "--- Applying deployment.yaml ---"
+          cat k8s/deployment.yaml
+          kubectl apply -f k8s/deployment.yaml
+
+          echo "--- Applying service.yaml ---"
+          kubectl apply -f k8s/service.yaml

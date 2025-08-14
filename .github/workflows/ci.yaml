@@ -33,7 +33,7 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::593793056386:role/AmazonECRRoleForGitHubActions
+          role-to-assume: arn:aws:iam::593793056386:role/WorkshopGitHubActionsRole
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Login to Amazon ECR
@@ -81,7 +81,7 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::593793056386:role/AmazonECRRoleForGitHubActions
+          role-to-assume: arn:aws:iam::593793056386:role/WorkshopGitHubActionsRole
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Set up Kubeconfig for EKS

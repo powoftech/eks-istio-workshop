@@ -79,7 +79,7 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::593793056386:role/GitHubActionsRoleForAmazonECR # <-- USE THE SAME ROLE ARN
+          role-to-assume: arn:aws:iam::593793056386:role/GitHubActionsRoleForAmazonECR
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Set up Kubeconfig for EKS
@@ -99,7 +99,7 @@ jobs:
           # 3. Apply the updated manifests to the cluster.
           echo "--- Applying deployment.yaml ---"
           cat k8s/deployment.yaml
-          kubectl apply -f k8s/deployment.yaml
+          kubectl apply -f k8s/deployment.yaml --validate=false
 
           echo "--- Applying service.yaml ---"
-          kubectl apply -f k8s/service.yaml
+          kubectl apply -f k8s/service.yaml --validate=false

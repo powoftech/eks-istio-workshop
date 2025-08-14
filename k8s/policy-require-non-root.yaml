@@ -1,0 +1,24 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: require-non-root-user
+spec:
+  validationFailureAction: Enforce
+  background: true
+  rules:
+  - name: check-for-non-root
+    match:
+      any:
+      - resources:
+          kinds:
+          - Pod
+    validate:
+      message: "Containers must not run as root. Set spec.securityContext.runAsNonRoot to true."
+      pattern:
+        spec:
+          # This pattern checks for EITHER a pod-level or container-level security context
+          =(securityContext):
+            =(runAsNonRoot): true
+          containers:
+          - =(securityContext):
+              =(runAsNonRoot): true

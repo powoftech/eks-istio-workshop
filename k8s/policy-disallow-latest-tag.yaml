@@ -1,0 +1,22 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: disallow-latest-tag
+spec:
+  # This rule applies to all Pods, Deployments, StatefulSets, etc.
+  validationFailureAction: Enforce 
+  background: true
+  rules:
+  - name: require-not-latest-tag
+    match:
+      any:
+      - resources:
+          kinds:
+          - Pod
+    validate:
+      message: "Using the 'latest' image tag is a security risk and is not allowed. Please use a specific image tag."
+      pattern:
+        spec:
+          containers:
+          # This pattern says "the image field of ANY container MUST NOT end with :latest"
+          - image: "!*:latest"

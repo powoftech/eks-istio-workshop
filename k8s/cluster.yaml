@@ -17,10 +17,13 @@ managedNodeGroups:
       role: worker
     privateNetworking: true
 
-addons:
-- name: vpc-cni
-  useDefaultPodIdentityAssociations: true
-
 addonsConfig:
   autoApplyPodIdentityAssociations: true
-
+# bear in mind that if either pod identity or IRSA configuration is explicitly set in the config file,
+# or if the addon does not support pod identities,
+# addonsConfig.autoApplyPodIdentityAssociations won't have any effect.
+addons:
+- name: vpc-cni
+- name: coredns
+- name: kube-proxy
+- name: eks-pod-identity-agent

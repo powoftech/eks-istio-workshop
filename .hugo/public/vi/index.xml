@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bảo mật Container Registry với Quét Lỗ hổng và Thực thi Chính sách :: Bảo mật Container Registry với Quét lỗ hổng và Thực thi chính sách</title>
+    <title>Bảo mật Container Registry với Quét Lỗ hổng và Thực thi Chính sách</title>
     <link>http://localhost:1313/vi/index.html</link>
     <description>Mô tả workshop Workshop AWS toàn diện này sẽ dạy bạn cách xây dựng, bảo mật và giám sát các ứng dụng container hóa bằng các công nghệ cloud-native hiện đại và thực tiễn DevSecOps. Bạn sẽ tạo ra một pipeline container bảo mật hoàn chỉnh từ đầu đến cuối bao gồm quét lỗ hổng, thực thi chính sách và phát hiện mối đe dọa runtime.&#xA;Trong suốt workshop thực hành này, bạn sẽ:</description>
     <generator>Hugo</generator>
@@ -41,6 +41,27 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/vi/provision-eks-cluster-and-ecr-repository/index.html</guid>
       <description>Tạo Cấu hình EKS Cluster Chúng ta sẽ sử dụng eksctl để build cluster. Thực tiễn tốt nhất là định nghĩa cluster trong một file cấu hình, sau đó bạn có thể commit vào Git repository để kiểm soát phiên bản và tái tạo.&#xA;Trong root directory của dự án, tạo thư mục mới có tên k8s.&#xA;mkdir k8s cd k8s Tạo file mới có tên cluster.yaml&#xA;Dán nội dung sau vào cluster.yaml. Đọc các comment để hiểu từng dòng làm gì</description>
+    </item>
+    <item>
+      <title>Cài đặt và Cấu hình Kyverno như Cluster Gatekeeper</title>
+      <link>http://localhost:1313/vi/install-and-configure-kyverno-as-cluster-gatekeeper/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/vi/install-and-configure-kyverno-as-cluster-gatekeeper/index.html</guid>
+      <description>Mục tiêu của chúng ta ở đây là làm cho cluster tự bảo vệ. Pipeline mà chúng ta đã xây dựng rất tốt, nhưng nó không ngăn chặn ai đó có quyền truy cập kubectl deploy thủ công một container không an toàn. Bây giờ chúng ta sẽ cài đặt một gatekeeper–một admission controller–để thực thi các quy tắc của chúng ta trên mọi workload cố gắng chạy trên cluster.</description>
+    </item>
+    <item>
+      <title>Cài đặt và Test Falco cho Phát hiện Mối đe dọa Runtime</title>
+      <link>http://localhost:1313/vi/install-and-test-falco-for-runtime-threat-detection/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/vi/install-and-test-falco-for-runtime-threat-detection/index.html</guid>
+      <description>Chúng ta sẽ tập trung trước tiên vào phần bảo mật runtime. Nhiệm vụ của chúng ta là phát hiện và cảnh báo về hoạt động đáng ngờ trong các container đang chạy theo thời gian thực.&#xA;Công cụ của chúng ta cho việc này là Falco, tiêu chuẩn open-source CNCF cho phát hiện mối đe dọa runtime cloud-native. Nó hoạt động như một camera bảo mật theo dõi system call và cảnh báo bạn khi container làm điều gì đó không nên làm.</description>
+    </item>
+    <item>
+      <title>Dọn dẹp tài nguyên</title>
+      <link>http://localhost:1313/vi/clean-up-resources/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/vi/clean-up-resources/index.html</guid>
+      <description>Tổng quan Sau khi hoàn thành workshop, hoặc nếu bạn gặp bất kỳ lỗi deployment nào, bạn nên dọn dẹp tài nguyên AWS để tránh phí không cần thiết. Hướng dẫn này cung cấp hướng dẫn từng bước để xóa đúng cách tất cả tài nguyên đã deploy.&#xA;Quy trình Dọn dẹp Thực hiện các bước này theo thứ tự được chỉ định để đảm bảo tất cả tài nguyên được xóa đúng cách:</description>
     </item>
   </channel>
 </rss>

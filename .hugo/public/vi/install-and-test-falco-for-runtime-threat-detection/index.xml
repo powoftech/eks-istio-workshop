@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cài đặt và Test Falco cho Phát hiện Mối đe dọa Runtime :: Bảo mật Container Registry với Quét lỗ hổng và Thực thi chính sách</title>
+    <title>Cài đặt và Test Falco cho Phát hiện Mối đe dọa Runtime :: Bảo mật Container Registry với Quét Lỗ hổng và Thực thi Chính sách</title>
     <link>http://localhost:1313/vi/install-and-test-falco-for-runtime-threat-detection/index.html</link>
     <description>Chúng ta sẽ tập trung trước tiên vào phần bảo mật runtime. Nhiệm vụ của chúng ta là phát hiện và cảnh báo về hoạt động đáng ngờ trong các container đang chạy theo thời gian thực.&#xA;Công cụ của chúng ta cho việc này là Falco, tiêu chuẩn open-source CNCF cho phát hiện mối đe dọa runtime cloud-native. Nó hoạt động như một camera bảo mật theo dõi system call và cảnh báo bạn khi container làm điều gì đó không nên làm.</description>
     <generator>Hugo</generator>

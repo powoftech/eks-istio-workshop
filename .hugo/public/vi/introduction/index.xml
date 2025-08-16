@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Giới thiệu :: Bảo mật Container Registry với Quét lỗ hổng và Thực thi chính sách</title>
+    <title>Giới thiệu :: Bảo mật Container Registry với Quét Lỗ hổng và Thực thi Chính sách</title>
     <link>http://localhost:1313/vi/introduction/index.html</link>
     <description>Chào mừng bạn đến với workshop AWS toàn diện này, nơi bạn sẽ học cách xây dựng, bảo mật và giám sát các ứng dụng container hóa sử dụng các công nghệ cloud-native hiện đại. Workshop thực hành này sẽ hướng dẫn bạn tạo một pipeline DevSecOps hoàn chỉnh cho các ứng dụng Kubernetes.&#xA;Amazon Elastic Container Registry (ECR) Amazon Elastic Container Registry (ECR) là một registry Docker container được quản lý hoàn toàn, giúp các nhà phát triển dễ dàng lưu trữ, quản lý và triển khai các Docker container image. ECR được tích hợp với Amazon EKS và Amazon ECS, đơn giản hóa quy trình từ phát triển đến sản xuất.</description>
     <generator>Hugo</generator>

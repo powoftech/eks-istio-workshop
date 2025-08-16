@@ -13,7 +13,7 @@ defaultContentLanguage = 'en'
   [languages.vi]
     languageCode = 'vi-vn'
     languageName = 'Tiếng Việt'
-    title = 'Bảo mật Container Registry với Quét lỗ hổng và Thực thi chính sách'
+    title = 'Bảo mật Container Registry với Quét Lỗ hổng và Thực thi Chính sách'
     weight = 2
 
 [params]

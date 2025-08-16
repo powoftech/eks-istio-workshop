@@ -4,6 +4,8 @@ weight = 1
 chapter = true
 +++
 
+![Architecture Diagram](/images/architecture-diagram.png)
+
 ## Workshop description
 
 This comprehensive AWS workshop teaches you to build, secure, and monitor containerized applications using modern cloud-native technologies and DevSecOps practices. You'll create a complete end-to-end secure container pipeline that encompasses vulnerability scanning, policy enforcement, and runtime threat detection.
@@ -50,7 +52,7 @@ Previous experience with EKS, security tools, or policy engines is helpful but n
 **Module Breakdown:**
 
 - Setup and Prerequisites: 30 minutes
-- Project Repository Creation: 20 minutes  
+- Project Repository Creation: 20 minutes
 - Application and CI Workflow: 45 minutes
 - EKS Cluster Provisioning: 30 minutes
 - Kyverno Policy Engine Setup: 45 minutes

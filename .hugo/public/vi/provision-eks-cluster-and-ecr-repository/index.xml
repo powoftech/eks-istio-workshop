@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cung cấp EKS Cluster và Tự động hóa Deployment :: Bảo mật Container Registry với Quét lỗ hổng và Thực thi chính sách</title>
+    <title>Cung cấp EKS Cluster và Tự động hóa Deployment :: Bảo mật Container Registry với Quét Lỗ hổng và Thực thi Chính sách</title>
     <link>http://localhost:1313/vi/provision-eks-cluster-and-ecr-repository/index.html</link>
     <description>Tạo Cấu hình EKS Cluster Chúng ta sẽ sử dụng eksctl để build cluster. Thực tiễn tốt nhất là định nghĩa cluster trong một file cấu hình, sau đó bạn có thể commit vào Git repository để kiểm soát phiên bản và tái tạo.&#xA;Trong root directory của dự án, tạo thư mục mới có tên k8s.&#xA;mkdir k8s cd k8s Tạo file mới có tên cluster.yaml&#xA;Dán nội dung sau vào cluster.yaml. Đọc các comment để hiểu từng dòng làm gì</description>
     <generator>Hugo</generator>

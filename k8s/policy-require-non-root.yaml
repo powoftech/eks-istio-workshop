@@ -12,13 +12,33 @@ spec:
       - resources:
           kinds:
           - Pod
+    exclude:
+      any:
+      # Exclude Falco namespace
+      - resources:
+          namespaces:
+          - falco
+          - falco-system
+      # Exclude pods with privileged system labels
+      - resources:
+          selector:
+            matchLabels:
+              app.kubernetes.io/name: falco
+      # Exclude system namespaces that commonly need root
+      - resources:
+          namespaces:
+          - kube-system
+          - istio-system
+          - monitoring
     validate:
-      message: "Containers must not run as root. Set spec.securityContext.runAsNonRoot to true."
-      pattern:
-        spec:
-          # This pattern checks for EITHER a pod-level or container-level security context
-          =(securityContext):
-            =(runAsNonRoot): true
+      message: "Containers must not run as root. Set spec.securityContext.runAsNonRoot to true at pod or container level."
+      anyPattern:
+      # Pattern 1: Pod-level security context with runAsNonRoot: true
+      - spec:
+          securityContext:
+            runAsNonRoot: true
+      # Pattern 2: All containers have runAsNonRoot: true in their security context
+      - spec:
           containers:
-          - =(securityContext):
-              =(runAsNonRoot): true
+          - securityContext:
+              runAsNonRoot: true

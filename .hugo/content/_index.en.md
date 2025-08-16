@@ -1,15 +1,61 @@
 +++
-title = ""
+title = "Container Registry Security with Vulnerability Scanning and Policy Enforcement"
 weight = 1
-chapter = false
+chapter = true
 +++
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a libero nunc. Vivamus vel neque pharetra, faucibus enim et, convallis magna. Sed pulvinar leo vitae tempor euismod. Donec sollicitudin pretium nunc, vitae tincidunt elit cursus in. Integer mollis quam tellus, nec rhoncus massa condimentum ut. Aenean varius, massa at dapibus facilisis, quam libero malesuada tellus, quis porttitor est magna non nisl. Curabitur id egestas ex. Vestibulum id pharetra nibh. Morbi sed lectus lorem. Proin vel nisl mauris. Fusce quis lectus felis.
+## Workshop description
 
-Suspendisse ornare quam urna, ac placerat augue sagittis vitae. Ut vitae justo ac erat mattis volutpat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin ut nibh erat. Mauris ultricies turpis nec metus iaculis suscipit. Fusce tristique quis mauris at lobortis. Morbi quis ante felis. Vivamus cursus vel orci quis pharetra. Mauris tincidunt leo vel sollicitudin ullamcorper. In tincidunt elementum enim, vulputate suscipit nulla accumsan id. Etiam placerat diam eget augue feugiat auctor. Pellentesque vitae velit a sem vestibulum bibendum. Pellentesque pharetra vel augue a mattis.
+This comprehensive AWS workshop teaches you to build, secure, and monitor containerized applications using modern cloud-native technologies and DevSecOps practices. You'll create a complete end-to-end secure container pipeline that encompasses vulnerability scanning, policy enforcement, and runtime threat detection.
 
-Sed suscipit iaculis nisl sit amet iaculis. Curabitur tellus nulla, semper quis risus vel, viverra venenatis magna. Nunc dictum varius pulvinar. Donec eget accumsan odio. Quisque rutrum volutpat suscipit. Aliquam tincidunt lacus sed felis lacinia suscipit. Quisque cursus nisi nulla. In feugiat pharetra nisi, sit amet dapibus enim auctor at. Donec sit amet neque vel enim facilisis lobortis eget quis orci. Aenean eu accumsan turpis. Duis porta, nulla eget imperdiet blandit, felis nisi laoreet nisi, vel vehicula tortor erat eget dui. Sed euismod enim purus, eget vestibulum massa hendrerit id. Aliquam dapibus finibus aliquet.
+Throughout this hands-on workshop, you'll:
 
-Donec lobortis vel tortor id suscipit. Donec et lobortis dolor. Aenean commodo, turpis a aliquam pellentesque, est nunc suscipit nulla, a tristique lorem ante ac sapien. Curabitur viverra nunc sit amet risus gravida, non elementum nulla vestibulum. Aenean bibendum, ex at porttitor vehicula, diam sapien vestibulum sapien, semper sollicitudin augue ex et magna. Phasellus nec nibh placerat, facilisis mauris sit amet, dignissim ligula. Fusce ultricies tellus at leo venenatis hendrerit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam sit amet feugiat ex. Vestibulum scelerisque diam a tellus posuere, posuere tristique augue rutrum. Pellentesque vel turpis faucibus, congue orci ut, pharetra arcu.
+- **Build a secure CI/CD pipeline** using GitHub Actions that automatically builds, scans, and deploys containerized applications
+- **Implement container vulnerability scanning** with Amazon ECR's integrated security features
+- **Deploy policy enforcement** using Kyverno as a Kubernetes admission controller to prevent insecure workloads
+- **Set up runtime threat detection** with Falco to monitor and alert on suspicious container behavior
+- **Provision and manage** Amazon EKS clusters with security best practices
+- **Apply DevSecOps principles** by integrating security into every stage of the development lifecycle
 
-Morbi laoreet aliquam mi, id pulvinar ipsum feugiat in. Proin convallis et lacus accumsan fermentum. Aliquam convallis rhoncus nulla et bibendum. Cras sem erat, porta sit amet molestie sit amet, suscipit nec risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer iaculis nibh nec ullamcorper convallis. Nam vitae ex ac libero vehicula blandit. Maecenas bibendum iaculis cursus.
+By the end of this workshop, you'll have a production-ready, security-first container deployment pipeline that automatically prevents vulnerable images from reaching production and detects threats in real-time.
+
+## Intended audience
+
+This workshop is designed for:
+
+- **DevOps Engineers** looking to implement security controls in their container pipelines
+- **Security Engineers** wanting to learn cloud-native security tools and practices
+- **Platform Engineers** building secure Kubernetes platforms for development teams
+- **Software Developers** interested in understanding container security and secure deployment practices
+- **Cloud Architects** designing secure containerized solutions on AWS
+- **Site Reliability Engineers (SREs)** implementing security monitoring and policy enforcement
+
+## Assumed knowledge
+
+Participants should have:
+
+- **Basic containerization experience** with Docker (building images, running containers)
+- **Fundamental Kubernetes knowledge** (pods, deployments, services, namespaces)
+- **AWS foundational understanding** (basic familiarity with AWS services and concepts)
+- **Command-line proficiency** in Linux/Unix environments
+- **Git and GitHub experience** for version control and basic CI/CD concepts
+- **YAML syntax familiarity** for Kubernetes manifests and configuration files
+
+Previous experience with EKS, security tools, or policy engines is helpful but not required as the workshop provides step-by-step guidance.
+
+## Time to complete the workshop
+
+**Total Duration:** 3-4 hours
+
+**Module Breakdown:**
+
+- Setup and Prerequisites: 30 minutes
+- Project Repository Creation: 20 minutes  
+- Application and CI Workflow: 45 minutes
+- EKS Cluster Provisioning: 30 minutes
+- Kyverno Policy Engine Setup: 45 minutes
+- Falco Runtime Security: 30 minutes
+- Testing and Validation: 30 minutes
+- Clean-up: 15 minutes
+
+The workshop is designed to be completed in a single session, with natural break points after each major module. All infrastructure provisioning and deployments are included in the timing estimates.

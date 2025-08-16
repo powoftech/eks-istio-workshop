@@ -1,22 +1,58 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/vi/posts/my-first-post/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/posts/my-first-post/index.html" />
-    <xhtml:link rel="alternate" hreflang="en-us" href="http://localhost:1313/posts/my-first-post/index.html" />
-    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/vi/posts/my-first-post/index.html" />
+    <loc>http://localhost:1313/vi/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/index.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="http://localhost:1313/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/vi/index.html" />
   </url>
   <url>
-    <loc>http://localhost:1313/vi/posts/my-second-post/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/posts/my-second-post/index.html" />
-    <xhtml:link rel="alternate" hreflang="en-us" href="http://localhost:1313/posts/my-second-post/index.html" />
-    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/vi/posts/my-second-post/index.html" />
+    <loc>http://localhost:1313/vi/introduction/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/introduction/index.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="http://localhost:1313/introduction/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/vi/introduction/index.html" />
   </url>
   <url>
-    <loc>http://localhost:1313/vi/posts/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/posts/index.html" />
-    <xhtml:link rel="alternate" hreflang="en-us" href="http://localhost:1313/posts/index.html" />
-    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/vi/posts/index.html" />
+    <loc>http://localhost:1313/vi/prerequisites/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/prerequisites/index.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="http://localhost:1313/prerequisites/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/vi/prerequisites/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/vi/create-project-repository/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/create-project-repository/index.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="http://localhost:1313/create-project-repository/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/vi/create-project-repository/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/vi/create-secure-buildable-application-and-ci-workflow/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/create-secure-buildable-application-and-ci-workflow/index.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="http://localhost:1313/create-secure-buildable-application-and-ci-workflow/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/vi/create-secure-buildable-application-and-ci-workflow/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/vi/provision-eks-cluster-and-ecr-repository/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/provision-eks-cluster-and-ecr-repository/index.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="http://localhost:1313/provision-eks-cluster-and-ecr-repository/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/vi/provision-eks-cluster-and-ecr-repository/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/vi/install-and-configure-kyverno-as-cluster-gatekeeper/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/install-and-configure-kyverno-as-cluster-gatekeeper/index.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="http://localhost:1313/install-and-configure-kyverno-as-cluster-gatekeeper/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/vi/install-and-configure-kyverno-as-cluster-gatekeeper/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/vi/install-and-test-falco-for-runtime-threat-detection/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/install-and-test-falco-for-runtime-threat-detection/index.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="http://localhost:1313/install-and-test-falco-for-runtime-threat-detection/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/vi/install-and-test-falco-for-runtime-threat-detection/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/vi/clean-up-resources/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/clean-up-resources/index.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="http://localhost:1313/clean-up-resources/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/vi/clean-up-resources/index.html" />
   </url>
   <url>
     <loc>http://localhost:1313/vi/categories/index.html</loc>

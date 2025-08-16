@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="vi-vn" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.148.2">
+    <meta name="generator" content="Relearn 8.0.0+9803d5122ebb3276acea823f476e9eb44f607862">
+    <meta name="description" content="Tạo Ứng dụng Mẫu và Dockerfile Trước tiên, chúng ta cần một thứ gì đó để build. Chúng ta sẽ tạo một ứng dụng Node.js “Hello World” rất đơn giản và một Dockerfile có ý thức bảo mật.
+Trong thư mục dự án secure-container-pipeline của bạn, tạo một thư mục mới có tên app.
+mkdir app cd app Tạo file ứng dụng Node.js app.js:
+# Trong thư mục &#39;app&#39; touch app.js Dán đoạn code server đơn giản này vào app/app.js:">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tạo Ứng dụng Có thể Build Bảo mật và CI Workflow :: Bảo mật Container Registry với Quét lỗ hổng và Thực thi chính sách">
+    <meta name="twitter:description" content="Tạo Ứng dụng Mẫu và Dockerfile Trước tiên, chúng ta cần một thứ gì đó để build. Chúng ta sẽ tạo một ứng dụng Node.js “Hello World” rất đơn giản và một Dockerfile có ý thức bảo mật.
+Trong thư mục dự án secure-container-pipeline của bạn, tạo một thư mục mới có tên app.
+mkdir app cd app Tạo file ứng dụng Node.js app.js:
+# Trong thư mục &#39;app&#39; touch app.js Dán đoạn code server đơn giản này vào app/app.js:">
+    <meta property="og:url" content="http://localhost:1313/vi/create-secure-buildable-application-and-ci-workflow/index.html">
+    <meta property="og:site_name" content="Bảo mật Container Registry với Quét lỗ hổng và Thực thi chính sách">
+    <meta property="og:title" content="Tạo Ứng dụng Có thể Build Bảo mật và CI Workflow :: Bảo mật Container Registry với Quét lỗ hổng và Thực thi chính sách">
+    <meta property="og:description" content="Tạo Ứng dụng Mẫu và Dockerfile Trước tiên, chúng ta cần một thứ gì đó để build. Chúng ta sẽ tạo một ứng dụng Node.js “Hello World” rất đơn giản và một Dockerfile có ý thức bảo mật.
+Trong thư mục dự án secure-container-pipeline của bạn, tạo một thư mục mới có tên app.
+mkdir app cd app Tạo file ứng dụng Node.js app.js:
+# Trong thư mục &#39;app&#39; touch app.js Dán đoạn code server đơn giản này vào app/app.js:">
+    <meta property="og:locale" content="vi_vn">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Tạo Ứng dụng Có thể Build Bảo mật và CI Workflow :: Bảo mật Container Registry với Quét lỗ hổng và Thực thi chính sách">
+    <meta itemprop="description" content="Tạo Ứng dụng Mẫu và Dockerfile Trước tiên, chúng ta cần một thứ gì đó để build. Chúng ta sẽ tạo một ứng dụng Node.js “Hello World” rất đơn giản và một Dockerfile có ý thức bảo mật.
+Trong thư mục dự án secure-container-pipeline của bạn, tạo một thư mục mới có tên app.
+mkdir app cd app Tạo file ứng dụng Node.js app.js:
+# Trong thư mục &#39;app&#39; touch app.js Dán đoạn code server đơn giản này vào app/app.js:">
+    <meta itemprop="wordCount" content="950">
+    <title>Tạo Ứng dụng Có thể Build Bảo mật và CI Workflow :: Bảo mật Container Registry với Quét lỗ hổng và Thực thi chính sách</title>
+    <link href="http://localhost:1313/create-secure-buildable-application-and-ci-workflow/index.html" rel="alternate" hreflang="x-default">
+    <link href="http://localhost:1313/create-secure-buildable-application-and-ci-workflow/index.html" rel="alternate" hreflang="en-us">
+    <link href="http://localhost:1313/vi/create-secure-buildable-application-and-ci-workflow/index.html" rel="alternate" hreflang="vi-vn">
+    <link href="/vi/create-secure-buildable-application-and-ci-workflow/index.xml" rel="alternate" type="application/rss+xml" title="Tạo Ứng dụng Có thể Build Bảo mật và CI Workflow :: Bảo mật Container Registry với Quét lỗ hổng và Thực thi chính sách">
+    <link href="/images/favicon.png?1755341007" rel="icon" type="image/png">
+    <link href="/css/auto-complete/auto-complete.min.css?1755341007" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1755341007" defer></script>
+    <script src="/js/search-lunr.js?1755341007" defer></script>
+    <script src="/js/search.js?1755341007" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.vi.js?1755341007";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1755341007" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1755341007" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1755341007" defer></script>
+    <script src="/js/lunr/lunr.vi.min.js?1755341007" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['vi'];
+    </script>
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1755341007" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1755341007" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1755341007" rel="stylesheet">
+    <link href="/css/theme.css?1755341007" rel="stylesheet">
+    <link href="/css/format-html.css?1755341007" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/vi\/create-secure-buildable-application-and-ci-workflow\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Sao chép vào bảng tạm`;
+      window.T_Copied_to_clipboard = `Sao chép vào bảng tạm!`;
+      window.T_Copy_link_to_clipboard = `Sao chép nối kết vào bảng tạm`;
+      window.T_Link_copied_to_clipboard = `Liên kết được sao chép vào bảng tạm!`;
+      window.T_Reset_view = `Đặt lại dạng xem`;
+      window.T_View_reset = `Xem đặt lại!`;
+      window.T_No_results_found = `Không tìm thấy kết quả nào cho "{0}"`;
+      window.T_N_results_found = `{1} kết quả được tìm thấy cho "{0}"`;
+      // variant stuff
+      window.relearn.themevariants = [ 'learn' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/vi/create-secure-buildable-application-and-ci-workflow/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Mục lục (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#tạo-ứng-dụng-mẫu-và-dockerfile">Tạo Ứng dụng Mẫu và Dockerfile</a></li>
+    <li><a href="#tạo-ecr-repository">Tạo ECR Repository</a></li>
+    <li><a href="#thiết-lập-quyền-truy-cập-bảo-mật-từ-github-actions-đến-aws-oidc">Thiết lập Quyền truy cập Bảo mật từ GitHub Actions đến AWS (OIDC)</a></li>
+    <li><a href="#tạo-github-actions-ci-workflow">Tạo GitHub Actions CI Workflow</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/vi/index.html"><span itemprop="name">Bảo mật Container Registry với Quét Lỗ hổng và Thực thi Chính sách</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Tạo Ứng dụng Có thể Build Bảo mật và CI Workflow</span><meta itemprop="position" content="2"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/vi/create-project-repository/index.html" title="Tạo Repository Dự án (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/vi/provision-eks-cluster-and-ecr-repository/index.html" title="Cung cấp EKS Cluster và Tự động hóa Deployment (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Nội dung khác"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable create-secure-buildable-application-and-ci-workflow" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="tạo-ứng-dụng-có-thể-build-bảo-mật-và-ci-workflow">Tạo Ứng dụng Có thể Build Bảo mật và CI Workflow</h1>
+
+<h2 id="tạo-ứng-dụng-mẫu-và-dockerfile">Tạo Ứng dụng Mẫu và Dockerfile</h2>
+<p>Trước tiên, chúng ta cần một thứ gì đó để build. Chúng ta sẽ tạo một ứng dụng Node.js &ldquo;Hello World&rdquo; rất đơn giản và một Dockerfile có ý thức bảo mật.</p>
+<ol>
+<li>
+<p><strong>Trong thư mục dự án <code>secure-container-pipeline</code> của bạn, tạo một thư mục mới có tên <code>app</code>.</strong></p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir app
+</span></span><span style="display:flex;"><span>cd app</span></span></code></pre></div>
+</li>
+<li>
+<p><strong>Tạo file ứng dụng Node.js <code>app.js</code>:</strong></p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Trong thư mục &#39;app&#39;</span>
+</span></span><span style="display:flex;"><span>touch app.js</span></span></code></pre></div>
+<p>Dán đoạn code server đơn giản này vào <code>app/app.js</code>:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// app/app.js
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">http</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;http&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">port</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">8080</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">server</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">createServer</span>((<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">statusCode</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">setHeader</span>(<span style="color:#e6db74">&#34;Content-Type&#34;</span>, <span style="color:#e6db74">&#34;text/plain&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#e6db74">&#34;Hello, FCJ-ers!\n&#34;</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">listen</span>(<span style="color:#a6e22e">port</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Server running on port </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">port</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>});</span></span></code></pre></div>
+</li>
+<li>
+<p><strong>Tạo <code>Dockerfile</code>:</strong></p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#75715e"># app/Dockerfile</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Stage 1: Sử dụng base image cụ thể, slim để giảm bề mặt tấn công.</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> node:22-slim AS base</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Tạo một user và group chuyên dụng, không phải root cho ứng dụng.</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Đây là một biện pháp bảo mật quan trọng.</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> addgroup --system --gid <span style="color:#ae81ff">1001</span> nodejs<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> adduser --system --uid <span style="color:#ae81ff">1001</span> appuser<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /home/appuser/app</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Chỉ copy file cần thiết và đặt quyền chính xác.</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --chown<span style="color:#f92672">=</span>appuser:nodejs app.js .<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Chuyển sang user không phải root. Mọi lệnh tiếp theo chạy với user này.</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">USER</span><span style="color:#e6db74"> appuser</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Expose port mà app chạy.</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">EXPOSE</span><span style="color:#e6db74"> 8080</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Lệnh để chạy ứng dụng.</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">CMD</span> [ <span style="color:#e6db74">&#34;node&#34;</span>, <span style="color:#e6db74">&#34;app.js&#34;</span> ]</span></span></code></pre></div>
+</li>
+<li>
+<p><strong>Quay lại root directory của dự án:</strong></p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ..</span></span></code></pre></div>
+</li>
+</ol>
+<h2 id="tạo-ecr-repository">Tạo ECR Repository</h2>
+<p>Hãy tạo container registry bảo mật nơi chúng ta sẽ lưu trữ các Docker image.</p>
+<ol>
+<li>
+<p><strong>Chạy lệnh AWS CLI này</strong> trong terminal của bạn:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws ecr create-repository <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--repository-name workshop-app <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--image-scanning-configuration scanOnPush<span style="color:#f92672">=</span>true <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--region us-east-2 <span style="color:#75715e"># Sử dụng cùng region với cluster của bạn</span></span></span></code></pre></div>
+
+<details open class=" box cstyle notices info">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-info-circle"></i> 
+    Thông tin
+  </summary>
+  <div class="box-content">
+<p>Flag <code>--image-scanning-configuration scanOnPush=true</code> là kiểm soát bảo mật có chủ ý đầu tiên của chúng ta. Chúng ta đã hướng dẫn AWS tự động quét mọi image mới mà chúng ta push vào repository này để tìm các lỗ hổng đã biết (CVE). Đây là một phần nền tảng của pipeline bảo mật của chúng ta.</p>
+  </div>
+</details>
+</li>
+</ol>
+<h2 id="thiết-lập-quyền-truy-cập-bảo-mật-từ-github-actions-đến-aws-oidc">Thiết lập Quyền truy cập Bảo mật từ GitHub Actions đến AWS (OIDC)</h2>
+<p>Chúng ta cần cấp quyền cho GitHub để push image vào ECR repository của chúng ta. Chúng ta sẽ sử dụng phương pháp hiện đại, bảo mật, không cần mật khẩu: OIDC (OpenID Connect).</p>
+<ol>
+<li><strong>Trong AWS Console, đi đến IAM <!-- raw HTML omitted -->→<!-- raw HTML omitted --> Identity providers.</strong>
+<ul>
+<li>Click <strong>Add provider</strong>.</li>
+<li>Chọn <strong>OpenID Connect</strong>.</li>
+<li>Với <strong>Provider URL</strong>, nhập <code>https://token.actions.githubusercontent.com</code>.</li>
+<li>Với <strong>Audience</strong>, nhập <code>sts.amazonaws.com</code>.</li>
+<li>Click <strong>Add provider</strong>.</li>
+</ul>
+</li>
+<li><strong>Tạo IAM Role cho GitHub Actions</strong>.
+<ul>
+<li>Đi đến <strong>IAM <!-- raw HTML omitted -->→<!-- raw HTML omitted --> Roles <!-- raw HTML omitted -->→<!-- raw HTML omitted --> Create role</strong>.</li>
+<li>Với <strong>Trusted entity type</strong>, chọn <strong>Web identity</strong>.</li>
+<li>Từ dropdown <strong>Identity provider</strong>, chọn provider <code>token.actions.githubusercontent.com</code> mà bạn vừa tạo.</li>
+<li>Với <strong>Audience</strong>, chọn <code>sts.amazonaws.com</code>.</li>
+<li>Với <strong>GitHub organization/repository</strong>, nhập thông tin chi tiết của bạn. Với dự án cá nhân, bạn có thể cụ thể:
+<ul>
+<li>Organization: <code>your-github-username</code></li>
+<li>Repository: <code>secure-container-pipeline</code></li>
+<li>(Tùy chọn nhưng khuyến nghị) Branch: <code>main</code> hoặc <code>master</code></li>
+</ul>
+</li>
+<li>Click <strong>Next</strong>.</li>
+<li>Trên màn hình <strong>Add permissions</strong>, tìm và attach policy <code>AmazonEC2ContainerRegistryPowerUser</code>. Điều này cung cấp đủ quyền để đăng nhập và push image vào ECR.</li>
+<li>Click <strong>Next</strong>.</li>
+<li>Đặt tên cho role, như <code>WorkshopGitHubActionsRole</code> <em>(Nhớ tên role. Bạn sẽ sử dụng role này để deploy vào EKS cluster sau)</em></li>
+<li>Tạo role.</li>
+<li><strong>QUAN TRỌNG</strong>: Click vào role mới mà bạn vừa tạo và copy ARN của nó. Nó sẽ giống như <code>arn:aws:iam::&lt;&lt;AWS Account ID&gt;&gt;:role/WorkshopGitHubActionsRole</code>. Bạn sẽ cần điều này cho bước tiếp theo.</li>
+</ul>
+</li>
+</ol>
+<h2 id="tạo-github-actions-ci-workflow">Tạo GitHub Actions CI Workflow</h2>
+<p>Đây là trung tâm của quá trình build và scan tự động của chúng ta.</p>
+<ol>
+<li>
+<p><strong>Tạo cấu trúc thư mục workflow:</strong></p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p .github/workflows</span></span></code></pre></div>
+</li>
+<li>
+<p><strong>Tạo file workflow <code>ci.yml</code>:</strong></p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>touch .github/workflows/ci.yml</span></span></code></pre></div>
+</li>
+<li>
+<p><strong>Dán YAML sau vào <code>.github/workflows/ci.yml</code>.</strong> Thay thế placeholder bằng Role ARN thực tế của bạn.</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># .github/workflows/ci.yml</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">CI Workflow for EKS Workshop</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Workflow này chạy trên mọi push vào branch main</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">push</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">branches</span>: [<span style="color:#ae81ff">main]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Cho phép bạn chạy workflow này thủ công từ tab Actions</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">workflow_dispatch</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">env</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">AWS_REGION</span>: <span style="color:#ae81ff">us-east-2</span> <span style="color:#75715e"># AWS region của bạn</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ECR_REPOSITORY</span>: <span style="color:#ae81ff">workshop-app</span> <span style="color:#75715e"># Tên ECR repository của bạn</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">EKS_CLUSTER_NAME</span>: <span style="color:#ae81ff">workshop-cluster</span> <span style="color:#75715e"># Tên EKS cluster của bạn</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">build-scan-push</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build, Scan &amp; Push</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">outputs</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">image</span>: <span style="color:#ae81ff">${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:${{ steps.image-def.outputs.tag }}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">permissions</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># Bắt buộc cho kết nối OIDC đến AWS</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">id-token</span>: <span style="color:#ae81ff">write</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">contents</span>: <span style="color:#ae81ff">read</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Checkout repository</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v5</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Configure AWS credentials</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">aws-actions/configure-aws-credentials@v4</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">role-to-assume</span>: <span style="color:#ae81ff">arn:aws:iam::&lt;&lt;AWS Account ID&gt;&gt;:role/WorkshopGitHubActionsRole</span> <span style="color:#75715e"># &lt;-- DÁN ROLE ARN CỦA BẠN VÀO ĐÂY</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">aws-region</span>: <span style="color:#ae81ff">${{ env.AWS_REGION }}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Login to Amazon ECR</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">id</span>: <span style="color:#ae81ff">login-ecr</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">aws-actions/amazon-ecr-login@v2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Define image tag</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">id</span>: <span style="color:#ae81ff">image-def</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">echo &#34;tag=${{ github.sha }}&#34; &gt;&gt; $GITHUB_OUTPUT</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build, tag, and push image to Amazon ECR</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">id</span>: <span style="color:#ae81ff">build-image</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">env</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">ECR_REGISTRY</span>: <span style="color:#ae81ff">${{ steps.login-ecr.outputs.registry }}</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">IMAGE_TAG</span>: <span style="color:#ae81ff">${{ steps.image-def.outputs.tag }}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f app/Dockerfile ./app
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Security Scan with Trivy</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">aquasecurity/trivy-action@master</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">image-ref</span>: <span style="color:#e6db74">&#34;${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:${{ steps.image-def.outputs.tag }}&#34;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">format</span>: <span style="color:#e6db74">&#34;table&#34;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#75715e"># Fail build nếu Trivy tìm thấy bất kỳ lỗ hổng nào với mức độ nghiêm trọng HIGH hoặc CRITICAL</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">exit-code</span>: <span style="color:#e6db74">&#34;1&#34;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">ignore-unfixed</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">vuln-type</span>: <span style="color:#e6db74">&#34;os,library&#34;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">severity</span>: <span style="color:#e6db74">&#34;CRITICAL,HIGH&#34;</span></span></span></code></pre></div>
+</li>
+<li>
+<p><strong>Commit và push để kích hoạt workflow</strong></p>
+<ul>
+<li>
+<p><strong>Thêm tất cả file mới vào Git, commit chúng và push:</strong></p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;feat: Add sample app, Dockerfile, and initial CI workflow&#34;</span>
+</span></span><span style="display:flex;"><span>git push origin main</span></span></code></pre></div>
+</li>
+<li>
+<p><strong>Quan sát phép màu!</strong> Đi đến GitHub repository của bạn, click vào tab <strong>Actions</strong>. Bạn sẽ thấy workflow của mình đang chạy. Click vào nó để xem log cho từng bước. Nó sẽ:</p>
+<ul>
+<li>Check out code.</li>
+<li>Kết nối an toàn đến AWS.</li>
+<li>Đăng nhập vào ECR.</li>
+<li>Build và push Docker image của bạn.</li>
+<li><strong>Quan trọng, sau đó nó sẽ chạy Trivy để quét image mà bạn vừa push.</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a id="R-logo" href="/vi/index.html">
+  
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    version="2.0"
+    aria-hidden="true"
+    class="globalNav-2218 globalNav-2215"
+    data-testid="awsc-logo"
+    viewBox="0 0 29 17"
+    width="80"
+  >
+    <path
+      class="globalNav-2216"
+      d="M8.38 6.17a2.6 2.6 0 0 0 .11.83q.12.349.3.67a.4.4 0 0 1 .07.21.36.36 0 0 1-.18.28l-.59.39a.43.43 0 0 1-.24.08.38.38 0 0 1-.28-.13 2.4 2.4 0 0 1-.34-.43c-.09-.16-.18-.34-.28-.55a3.44 3.44 0 0 1-2.74 1.29 2.54 2.54 0 0 1-1.86-.67 2.36 2.36 0 0 1-.68-1.79 2.43 2.43 0 0 1 .84-1.92 3.43 3.43 0 0 1 2.29-.72 7 7 0 0 1 1 .07c.35.05.7.12 1.07.2V3.3a2.06 2.06 0 0 0-.44-1.49 2.12 2.12 0 0 0-1.52-.43 4.4 4.4 0 0 0-1 .12 7 7 0 0 0-1 .32l-.33.12h-.14c-.14 0-.2-.1-.2-.29v-.46A.6.6 0 0 1 2.3.87a.8.8 0 0 1 .27-.2A6 6 0 0 1 3.74.25 5.7 5.7 0 0 1 5.19.07a3.37 3.37 0 0 1 2.44.76 3 3 0 0 1 .77 2.29zM4.6 7.59a3 3 0 0 0 1-.17 2 2 0 0 0 .88-.6 1.36 1.36 0 0 0 .32-.59 3.2 3.2 0 0 0 .09-.81V5A8 8 0 0 0 6 4.87h-.88a2.13 2.13 0 0 0-1.38.37 1.3 1.3 0 0 0-.46 1.08 1.3 1.3 0 0 0 .34 1c.278.216.63.313.98.27m7.49 1a.56.56 0 0 1-.36-.09.73.73 0 0 1-.2-.37L9.35.93a1.4 1.4 0 0 1-.08-.38c0-.15.07-.23.22-.23h.92a.56.56 0 0 1 .36.09.74.74 0 0 1 .19.37L12.53 7 14 .79a.6.6 0 0 1 .18-.37.6.6 0 0 1 .37-.09h.75a.62.62 0 0 1 .38.09.74.74 0 0 1 .18.37L17.31 7 18.92.76a.74.74 0 0 1 .19-.37.56.56 0 0 1 .36-.09h.87a.21.21 0 0 1 .23.23 1 1 0 0 1 0 .15s0 .13-.06.23l-2.26 7.2a.74.74 0 0 1-.19.37.6.6 0 0 1-.36.09h-.8a.53.53 0 0 1-.37-.1.64.64 0 0 1-.18-.37l-1.45-6-1.44 6a.64.64 0 0 1-.18.37.55.55 0 0 1-.37.1zm12 .24a6.3 6.3 0 0 1-1.44-.16 4.2 4.2 0 0 1-1.07-.37.7.7 0 0 1-.29-.26.7.7 0 0 1-.06-.27V7.3c0-.19.07-.29.21-.29a.6.6 0 0 1 .18 0l.23.1q.482.215 1 .32.549.12 1.11.12a2.47 2.47 0 0 0 1.36-.31 1 1 0 0 0 .48-.88.88.88 0 0 0-.25-.65 2.3 2.3 0 0 0-.94-.49l-1.35-.43a2.83 2.83 0 0 1-1.49-.94 2.24 2.24 0 0 1-.47-1.36 2 2 0 0 1 .25-1c.167-.3.395-.563.67-.77a3 3 0 0 1 1-.48A4.1 4.1 0 0 1 24.4.08a4.4 4.4 0 0 1 .62 0l.61.1.53.15.39.16q.159.094.28.23a.57.57 0 0 1 .08.31v.44q0 .3-.21.3a.9.9 0 0 1-.36-.12 4.35 4.35 0 0 0-1.8-.36 2.5 2.5 0 0 0-1.24.26.92.92 0 0 0-.44.84c0 .249.1.488.28.66.295.236.635.41 1 .51l1.32.42a2.9 2.9 0 0 1 1.44.9 2.1 2.1 0 0 1 .43 1.31 2.4 2.4 0 0 1-.24 1.08 2.34 2.34 0 0 1-.68.82 3 3 0 0 1-1 .53 4.6 4.6 0 0 1-1.35.22z"
+    />
+    <path
+      class="globalNav-2217"
+      d="M25.82 13.43a20.07 20.07 0 0 1-11.35 3.47A20.54 20.54 0 0 1 .61 11.62c-.29-.26 0-.62.32-.42a27.8 27.8 0 0 0 13.86 3.68 27.5 27.5 0 0 0 10.58-2.16c.52-.22.96.34.45.71"
+    />
+    <path
+      class="globalNav-2217"
+      d="M27.1 12c-.4-.51-2.6-.24-3.59-.12-.3 0-.34-.23-.07-.42 1.75-1.23 4.63-.88 5-.46s-.09 3.3-1.74 4.68c-.25.21-.49.09-.38-.18.34-.95 1.17-3.02.78-3.5"
+    />
+  </svg>
+</a>
+
+        </div>
+        <search><form action="/vi/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Tìm kiếm (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Tìm kiếm</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Tìm kiếm...">
+            <button class="search-clear" type="button" data-search-clear="" title="Xóa tìm kiếm"><i class="fas fa-times" title="Xóa tìm kiếm"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/vi/introduction/index.html"><a class="padding" href="/vi/introduction/index.html"><b>1.</b> Giới thiệu<i class="fa-fw fas fa-check read-icon"></i></a></li>
+            <li class="" data-nav-id="/vi/prerequisites/index.html"><a class="padding" href="/vi/prerequisites/index.html"><b>2.</b> Yêu cầu tiên quyết<i class="fa-fw fas fa-check read-icon"></i></a></li>
+            <li class="" data-nav-id="/vi/create-project-repository/index.html"><a class="padding" href="/vi/create-project-repository/index.html"><b>3.</b> Tạo Repository Dự án<i class="fa-fw fas fa-check read-icon"></i></a></li>
+            <li class="active " data-nav-id="/vi/create-secure-buildable-application-and-ci-workflow/index.html"><a class="padding" href="/vi/create-secure-buildable-application-and-ci-workflow/index.html"><b>4.</b> Tạo Ứng dụng Có thể Build Bảo mật và CI Workflow<i class="fa-fw fas fa-check read-icon"></i></a></li>
+            <li class="" data-nav-id="/vi/provision-eks-cluster-and-ecr-repository/index.html"><a class="padding" href="/vi/provision-eks-cluster-and-ecr-repository/index.html"><b>5.</b> Cung cấp EKS Cluster và Tự động hóa Deployment<i class="fa-fw fas fa-check read-icon"></i></a></li>
+            <li class="" data-nav-id="/vi/install-and-configure-kyverno-as-cluster-gatekeeper/index.html"><a class="padding" href="/vi/install-and-configure-kyverno-as-cluster-gatekeeper/index.html"><b>6.</b> Cài đặt và Cấu hình Kyverno như Cluster Gatekeeper<i class="fa-fw fas fa-check read-icon"></i></a></li>
+            <li class="" data-nav-id="/vi/install-and-test-falco-for-runtime-threat-detection/index.html"><a class="padding" href="/vi/install-and-test-falco-for-runtime-threat-detection/index.html"><b>7.</b> Cài đặt và Test Falco cho Phát hiện Mối đe dọa Runtime<i class="fa-fw fas fa-check read-icon"></i></a></li>
+            <li class="" data-nav-id="/vi/clean-up-resources/index.html"><a class="padding" href="/vi/clean-up-resources/index.html"><b>8.</b> Dọn dẹp tài nguyên<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <div class="nav-title padding">Nội dung khác</div>
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="https://www.facebook.com/groups/660548818043427"><a class="padding" href="https://www.facebook.com/groups/660548818043427" rel="external" target="_blank"><i class="fa-brands fa-square-facebook"></i> AWS Study Group<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+			<li class="R-languageswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-language"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-language">Ngôn ngữ</label>
+                  <select id="R-select-language">
+                    <option id="R-select-language-en" value="en" data-url="/create-secure-buildable-application-and-ci-workflow/index.html" lang="en-us">English</option>
+                    <option id="R-select-language-vi" value="vi" data-url="/vi/create-secure-buildable-application-and-ci-workflow/index.html" lang="vi-vn" selected data-selected>Tiếng Việt</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </li>
+            <li class="R-historyclearer">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-history"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <button>Xóa lịch sử..</button>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer"></div>
+      </div>
+    </aside>
+    <script src="/js/clipboard/clipboard.min.js?1755341007" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1755341007" defer></script>
+    <script src="/js/theme.js?1755341007" defer></script>
+  </body>
+</html>

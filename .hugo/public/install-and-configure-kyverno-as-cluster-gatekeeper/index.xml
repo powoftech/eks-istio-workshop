@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Install and Configure Kyverno as a Cluster Gatekeeper :: Container Registry Security with Vulnerability Scanning and Policy Enforcement</title>
+    <link>http://localhost:1313/install-and-configure-kyverno-as-cluster-gatekeeper/index.html</link>
+    <description>Our goal here is to make the cluster self-defending. The pipeline we built is great, but it doesn’t stop someone with kubectl access from manually deploying an insecure container. We will now install a gatekeeper–an admission controller–to enforce our rules on every single workload that tries to run on the cluster.&#xA;Our tool for this is Kyverno. It’s powerful, Kubernetes-native, and the policies are just simple YAML, making it perfect for our project.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/install-and-configure-kyverno-as-cluster-gatekeeper/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

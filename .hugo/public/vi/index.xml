@@ -1,18 +1,46 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kubernetes trên EKS với Networking Chuyên sâu và Service Mesh</title>
+    <title>Bảo mật Container Registry với Quét Lỗ hổng và Thực thi Chính sách :: Bảo mật Container Registry với Quét lỗ hổng và Thực thi chính sách</title>
     <link>http://localhost:1313/vi/index.html</link>
-    <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a libero nunc. Vivamus vel neque pharetra, faucibus enim et, convallis magna. Sed pulvinar leo vitae tempor euismod. Donec sollicitudin pretium nunc, vitae tincidunt elit cursus in. Integer mollis quam tellus, nec rhoncus massa condimentum ut. Aenean varius, massa at dapibus facilisis, quam libero malesuada tellus, quis porttitor est magna non nisl. Curabitur id egestas ex. Vestibulum id pharetra nibh. Morbi sed lectus lorem. Proin vel nisl mauris. Fusce quis lectus felis.</description>
+    <description>Mô tả workshop Workshop AWS toàn diện này sẽ dạy bạn cách xây dựng, bảo mật và giám sát các ứng dụng container hóa bằng các công nghệ cloud-native hiện đại và thực tiễn DevSecOps. Bạn sẽ tạo ra một pipeline container bảo mật hoàn chỉnh từ đầu đến cuối bao gồm quét lỗ hổng, thực thi chính sách và phát hiện mối đe dọa runtime.&#xA;Trong suốt workshop thực hành này, bạn sẽ:</description>
     <generator>Hugo</generator>
     <language>vi-vn</language>
     <atom:link href="http://localhost:1313/vi/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Bài Viết</title>
-      <link>http://localhost:1313/vi/posts/index.html</link>
+      <title>Giới thiệu</title>
+      <link>http://localhost:1313/vi/introduction/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/vi/posts/index.html</guid>
-      <description>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit…</description>
+      <guid>http://localhost:1313/vi/introduction/index.html</guid>
+      <description>Chào mừng bạn đến với workshop AWS toàn diện này, nơi bạn sẽ học cách xây dựng, bảo mật và giám sát các ứng dụng container hóa sử dụng các công nghệ cloud-native hiện đại. Workshop thực hành này sẽ hướng dẫn bạn tạo một pipeline DevSecOps hoàn chỉnh cho các ứng dụng Kubernetes.&#xA;Amazon Elastic Container Registry (ECR) Amazon Elastic Container Registry (ECR) là một registry Docker container được quản lý hoàn toàn, giúp các nhà phát triển dễ dàng lưu trữ, quản lý và triển khai các Docker container image. ECR được tích hợp với Amazon EKS và Amazon ECS, đơn giản hóa quy trình từ phát triển đến sản xuất.</description>
+    </item>
+    <item>
+      <title>Yêu cầu tiên quyết</title>
+      <link>http://localhost:1313/vi/prerequisites/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/vi/prerequisites/index.html</guid>
+      <description>Trước khi bắt đầu workshop này, bạn cần cài đặt và cấu hình một số công cụ thiết yếu giúp bạn tương tác với các dịch vụ AWS và các cluster Kubernetes. Những công cụ này tạo nền tảng để làm việc với container và tài nguyên AWS, đặc biệt là Amazon EKS.&#xA;AWS CLI AWS Command Line Interface (CLI) là một công cụ thống nhất cho phép bạn quản lý các dịch vụ AWS từ terminal. Bạn sẽ sử dụng nó để cấu hình thông tin xác thực AWS, tạo và quản lý tài nguyên AWS, và tương tác với các dịch vụ AWS khác nhau trong suốt workshop này.</description>
+    </item>
+    <item>
+      <title>Tạo Repository Dự án</title>
+      <link>http://localhost:1313/vi/create-project-repository/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/vi/create-project-repository/index.html</guid>
+      <description>Mọi dự án tốt đều cần một nơi lưu trữ.&#xA;Truy cập GitHub (hoặc nhà cung cấp Git ưa thích của bạn).&#xA;Tạo một repository public mới. Đặt tên nó như secure-container-pipeline.&#xA;Clone repository về máy local của bạn:&#xA;git clone &lt;your-repository-url&gt; cd secure-container-pipeline</description>
+    </item>
+    <item>
+      <title>Tạo Ứng dụng Có thể Build Bảo mật và CI Workflow</title>
+      <link>http://localhost:1313/vi/create-secure-buildable-application-and-ci-workflow/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/vi/create-secure-buildable-application-and-ci-workflow/index.html</guid>
+      <description>Tạo Ứng dụng Mẫu và Dockerfile Trước tiên, chúng ta cần một thứ gì đó để build. Chúng ta sẽ tạo một ứng dụng Node.js “Hello World” rất đơn giản và một Dockerfile có ý thức bảo mật.&#xA;Trong thư mục dự án secure-container-pipeline của bạn, tạo một thư mục mới có tên app.&#xA;mkdir app cd app Tạo file ứng dụng Node.js app.js:&#xA;# Trong thư mục &#39;app&#39; touch app.js Dán đoạn code server đơn giản này vào app/app.js:</description>
+    </item>
+    <item>
+      <title>Cung cấp EKS Cluster và Tự động hóa Deployment</title>
+      <link>http://localhost:1313/vi/provision-eks-cluster-and-ecr-repository/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/vi/provision-eks-cluster-and-ecr-repository/index.html</guid>
+      <description>Tạo Cấu hình EKS Cluster Chúng ta sẽ sử dụng eksctl để build cluster. Thực tiễn tốt nhất là định nghĩa cluster trong một file cấu hình, sau đó bạn có thể commit vào Git repository để kiểm soát phiên bản và tái tạo.&#xA;Trong root directory của dự án, tạo thư mục mới có tên k8s.&#xA;mkdir k8s cd k8s Tạo file mới có tên cluster.yaml&#xA;Dán nội dung sau vào cluster.yaml. Đọc các comment để hiểu từng dòng làm gì</description>
     </item>
   </channel>
 </rss>

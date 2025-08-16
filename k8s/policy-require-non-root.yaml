@@ -14,11 +14,14 @@ spec:
           - Pod
     exclude:
       any:
-      # Exclude Falco namespace
+      # Exclude Falco and Starboard namespace
       - resources:
           namespaces:
           - falco
           - falco-system
+          - starboard
+          - starboard-system
+          - starboard-operator
       # Exclude pods with privileged system labels
       - resources:
           selector:

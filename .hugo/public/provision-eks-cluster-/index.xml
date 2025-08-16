@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Create an EKS Cluster :: Container Registry Security with Vulnerability Scanning and Policy Enforcement</title>
+    <link>http://localhost:1313/provision-eks-cluster-/index.html</link>
+    <description>Create the EKS Cluster Configuration We will use eksctl to build the cluster. The best practice is to define the cluster in a configuration file, which you can then commit to your Git repository for version control and reproducibility.&#xA;In the root of your project directory, create a new folder named k8s.&#xA;mkdir k8s cd k8s Create a new file named cluster.yaml&#xA;Paste the following content into cluster.yaml. Read the comments to understand what each line does</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/provision-eks-cluster-/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

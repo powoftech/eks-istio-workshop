@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yêu cầu tiên quyết :: Bảo mật Container Registry với Quét lỗ hổng và Thực thi chính sách</title>
+    <link>http://localhost:1313/vi/prerequisites/index.html</link>
+    <description>Trước khi bắt đầu workshop này, bạn cần cài đặt và cấu hình một số công cụ thiết yếu giúp bạn tương tác với các dịch vụ AWS và các cluster Kubernetes. Những công cụ này tạo nền tảng để làm việc với container và tài nguyên AWS, đặc biệt là Amazon EKS.&#xA;AWS CLI AWS Command Line Interface (CLI) là một công cụ thống nhất cho phép bạn quản lý các dịch vụ AWS từ terminal. Bạn sẽ sử dụng nó để cấu hình thông tin xác thực AWS, tạo và quản lý tài nguyên AWS, và tương tác với các dịch vụ AWS khác nhau trong suốt workshop này.</description>
+    <generator>Hugo</generator>
+    <language>vi-vn</language>
+    <atom:link href="http://localhost:1313/vi/prerequisites/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

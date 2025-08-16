@@ -1,30 +1,22 @@
 var relearn_searchindex = [
   {
-    "breadcrumb": "Kubernetes trên EKS với Networking Chuyên sâu và Service Mesh \u003e Bài Viết",
-    "content": "Lists Unordered Item 1 Item 2 Item 2a Item 2b Item 3a Item 3b Ordered Item 1 Item 2 Item 3 Item 3a Item 3b",
-    "description": "Lists Unordered Item 1 Item 2 Item 2a Item 2b Item 3a Item 3b Ordered Item 1 Item 2 Item 3 Item 3a Item 3b",
+    "breadcrumb": "Bảo mật Container Registry với Quét lỗ hổng và Thực thi chính sách",
+    "content": "Chào mừng bạn đến với workshop AWS toàn diện này, nơi bạn sẽ học cách xây dựng, bảo mật và giám sát các ứng dụng container hóa sử dụng các công nghệ cloud-native hiện đại. Workshop thực hành này sẽ hướng dẫn bạn tạo một pipeline DevSecOps hoàn chỉnh cho các ứng dụng Kubernetes.\nAmazon Elastic Container Registry (ECR) Amazon Elastic Container Registry (ECR) là một registry Docker container được quản lý hoàn toàn, giúp các nhà phát triển dễ dàng lưu trữ, quản lý và triển khai các Docker container image. ECR được tích hợp với Amazon EKS và Amazon ECS, đơn giản hóa quy trình từ phát triển đến sản xuất.\nTính năng chính:\nQuản lý hoàn toàn: Không cần quản lý hoặc bảo trì hạ tầng Bảo mật: Các image được mã hóa khi lưu trữ và truyền tải, với tính năng quét lỗ hổng bảo mật Tính khả dụng cao: Được xây dựng trên Amazon S3 với độ bền 99.999999999% (11 số 9) Tích hợp: Hoạt động liền mạch với các dịch vụ AWS và IAM để kiểm soát truy cập chi tiết Hiệu quả chi phí: Chỉ trả tiền cho dung lượng lưu trữ bạn sử dụng mà không có phí trả trước Trong workshop này, bạn sẽ sử dụng ECR để lưu trữ các image ứng dụng container hóa và tích hợp với pipeline CI/CD.\nAmazon Elastic Kubernetes Service (EKS) Amazon Elastic Kubernetes Service (EKS) là một dịch vụ Kubernetes được quản lý hoàn toàn, giúp bạn dễ dàng chạy Kubernetes trên AWS mà không cần cài đặt, vận hành và bảo trì control plane hoặc node Kubernetes của riêng mình.\nLợi ích chính:\nControl Plane được quản lý hoàn toàn: AWS quản lý control plane Kubernetes, bao gồm tính khả dụng cao và các bản vá bảo mật Bảo mật theo mặc định: Tích hợp với AWS IAM, VPC và security groups Tính khả dụng cao: Control plane chạy trên nhiều Availability Zone Tương thích Kubernetes: Cập nhật thường xuyên để hỗ trợ các phiên bản Kubernetes mới nhất Tích hợp: Hoạt động với các dịch vụ AWS như ECR, ALB, EBS, EFS và CloudWatch Trong workshop này, bạn sẽ cung cấp một EKS cluster để triển khai và quản lý các ứng dụng container hóa với khả năng bảo mật và giám sát nâng cao.\nGitHub Actions GitHub Actions là một nền tảng CI/CD mạnh mẽ cho phép bạn tự động hóa các quy trình phát triển phần mềm trực tiếp từ repository GitHub của mình. Nó cho phép bạn build, test và deploy code ngay từ GitHub.\nKhả năng chính:\nTự động hóa quy trình: Tự động hóa các quy trình build, test và deployment Điều khiển bằng sự kiện: Kích hoạt workflow dựa trên các sự kiện GitHub như push, pull request hoặc release Marketplace: Truy cập hàng nghìn action được xây dựng sẵn từ cộng đồng Matrix Builds: Test trên nhiều hệ điều hành và phiên bản cùng lúc Quản lý Secrets: Lưu trữ và sử dụng thông tin nhạy cảm một cách an toàn trong workflow Trong workshop này, bạn sẽ tạo các GitHub Actions workflow để tự động build, scan và deploy ứng dụng lên EKS.\nKyverno Policy Engine Kyverno là một policy engine được thiết kế cho Kubernetes, cho phép bạn quản lý các cluster policy dưới dạng code. Nó cung cấp cách tiếp cận declarative để quản lý policy mà không cần học ngôn ngữ mới.\nTính năng chính:\nPolicy dựa trên YAML: Viết policy sử dụng cú pháp YAML quen thuộc của Kubernetes Validation: Thực thi các quy tắc cho cấu hình resource Mutation: Tự động sửa đổi resource để tuân thủ các tiêu chuẩn Generation: Tạo thêm resource dựa trên các quy tắc policy Reporting: Tạo báo cáo vi phạm policy Trong workshop này, bạn sẽ sử dụng Kyverno như một cluster gatekeeper để thực thi các policy bảo mật và quy tắc quản trị.\nFalco Runtime Security Falco là một công cụ bảo mật runtime mã nguồn mở phát hiện hành vi ứng dụng bất thường và cảnh báo về các mối đe dọa trong thời gian thực. Nó hoạt động như một camera an ninh cho các Kubernetes cluster của bạn.\nKhả năng bảo mật:\nPhát hiện mối đe dọa Runtime: Giám sát các kernel call và phát hiện hoạt động đáng ngờ Hiểu biết về Kubernetes: Hiểu được context và resource của Kubernetes Quy tắc linh hoạt: Định nghĩa quy tắc tùy chỉnh cho yêu cầu bảo mật cụ thể Đầu ra đa dạng: Gửi cảnh báo đến nhiều đích khác nhau (Slack, PagerDuty, v.v.) Cloud-Native: Được thiết kế đặc biệt cho môi trường container hóa Trong workshop này, bạn sẽ triển khai Falco để giám sát ứng dụng và phát hiện các mối đe dọa bảo mật tiềm ẩn trong thời gian thực.",
+    "description": "Chào mừng bạn đến với workshop AWS toàn diện này, nơi bạn sẽ học cách xây dựng, bảo mật và giám sát các ứng dụng container hóa sử dụng các công nghệ cloud-native hiện đại. Workshop thực hành này sẽ hướng dẫn bạn tạo một pipeline DevSecOps hoàn chỉnh cho các ứng dụng Kubernetes.\nAmazon Elastic Container Registry (ECR) Amazon Elastic Container Registry (ECR) là một registry Docker container được quản lý hoàn toàn, giúp các nhà phát triển dễ dàng lưu trữ, quản lý và triển khai các Docker container image. ECR được tích hợp với Amazon EKS và Amazon ECS, đơn giản hóa quy trình từ phát triển đến sản xuất.",
     "tags": [],
-    "title": "Bài Đăng Đầu Tiên",
-    "uri": "/vi/posts/my-first-post/index.html"
+    "title": "Giới thiệu",
+    "uri": "/vi/introduction/index.html"
   },
   {
-    "breadcrumb": "Kubernetes trên EKS với Networking Chuyên sâu và Service Mesh \u003e Bài Viết",
-    "content": "Introduction # Chào mừng thế giới print(\"Hello, World!\")",
-    "description": "Introduction # Chào mừng thế giới print(\"Hello, World!\")",
+    "breadcrumb": "Bảo mật Container Registry với Quét lỗ hổng và Thực thi chính sách",
+    "content": "Trước khi bắt đầu workshop này, bạn cần cài đặt và cấu hình một số công cụ thiết yếu giúp bạn tương tác với các dịch vụ AWS và các cluster Kubernetes. Những công cụ này tạo nền tảng để làm việc với container và tài nguyên AWS, đặc biệt là Amazon EKS.\nAWS CLI AWS Command Line Interface (CLI) là một công cụ thống nhất cho phép bạn quản lý các dịch vụ AWS từ terminal. Bạn sẽ sử dụng nó để cấu hình thông tin xác thực AWS, tạo và quản lý tài nguyên AWS, và tương tác với các dịch vụ AWS khác nhau trong suốt workshop này.\nCài đặt: Tải xuống và cài đặt AWS CLI từ tài liệu chính thức của AWS.\nCấu hình: Sau khi cài đặt, chạy aws configure để thiết lập access key, region mặc định và định dạng đầu ra.\nkubectl kubectl là công cụ dòng lệnh của Kubernetes cho phép bạn chạy các lệnh với cluster Kubernetes. Bạn sẽ sử dụng nó để triển khai ứng dụng, kiểm tra và quản lý tài nguyên cluster, và xem log trong cluster EKS của mình.\nCài đặt: Làm theo tài liệu Kubernetes để cài đặt kubectl cho hệ điều hành của bạn.\nXác minh: Chạy kubectl version --client để xác minh việc cài đặt.\neksctl eksctl là một công cụ dòng lệnh để tạo và quản lý cluster Kubernetes trên Amazon EKS. Nó đơn giản hóa quá trình tạo cluster EKS và worker node, tự động xử lý phần lớn việc thiết lập hạ tầng AWS bên dưới.\nCài đặt: Tải xuống eksctl từ GitHub releases chính thức hoặc sử dụng trình quản lý gói của bạn.\nXác minh: Chạy eksctl version để xác nhận việc cài đặt.\nHelm Helm là trình quản lý gói cho Kubernetes giúp bạn quản lý các ứng dụng Kubernetes. Bạn sẽ sử dụng Helm để cài đặt và cấu hình Kyverno, Falco và các ứng dụng khác trên cluster EKS của mình bằng cách sử dụng các chart đã được cấu hình sẵn.\nCài đặt: Cài đặt Helm theo tài liệu Helm chính thức.\nXác minh: Chạy helm version để xác minh việc cài đặt.\nDocker Docker là một nền tảng container hóa cho phép bạn xây dựng, đóng gói và chạy ứng dụng trong container. Bạn sẽ sử dụng Docker để xây dựng container image cho ứng dụng của mình và hiểu cách các workload được container hóa hoạt động trong môi trường Kubernetes.\nCài đặt: Tải xuống và cài đặt Docker Desktop từ trang web Docker chính thức hoặc sử dụng trình quản lý gói của hệ thống cho Docker Engine.\nXác minh: Chạy docker --version để xác nhận việc cài đặt và docker run hello-world để kiểm tra rằng Docker có thể pull và chạy container.\nLưu ý: Đảm bảo tất cả các công cụ đã được thêm vào PATH của hệ thống và có thể truy cập từ terminal trước khi tiếp tục.",
+    "description": "Trước khi bắt đầu workshop này, bạn cần cài đặt và cấu hình một số công cụ thiết yếu giúp bạn tương tác với các dịch vụ AWS và các cluster Kubernetes. Những công cụ này tạo nền tảng để làm việc với container và tài nguyên AWS, đặc biệt là Amazon EKS.\nAWS CLI AWS Command Line Interface (CLI) là một công cụ thống nhất cho phép bạn quản lý các dịch vụ AWS từ terminal. Bạn sẽ sử dụng nó để cấu hình thông tin xác thực AWS, tạo và quản lý tài nguyên AWS, và tương tác với các dịch vụ AWS khác nhau trong suốt workshop này.",
     "tags": [],
-    "title": "Bài Đăng Thứ Hai",
-    "uri": "/vi/posts/my-second-post/index.html"
+    "title": "Yêu cầu tiên quyết",
+    "uri": "/vi/prerequisites/index.html"
   },
   {
-    "breadcrumb": "Kubernetes trên EKS với Networking Chuyên sâu và Service Mesh",
-    "content": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit…",
-    "description": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit…",
-    "tags": [],
-    "title": "Bài Viết",
-    "uri": "/vi/posts/index.html"
-  },
-  {
-    "breadcrumb": "Kubernetes trên EKS với Networking Chuyên sâu và Service Mesh",
+    "breadcrumb": "Bảo mật Container Registry với Quét lỗ hổng và Thực thi chính sách",
     "content": "",
     "description": "",
     "tags": [],
@@ -32,7 +24,7 @@ var relearn_searchindex = [
     "uri": "/vi/categories/index.html"
   },
   {
-    "breadcrumb": "Kubernetes trên EKS với Networking Chuyên sâu và Service Mesh",
+    "breadcrumb": "Bảo mật Container Registry với Quét lỗ hổng và Thực thi chính sách",
     "content": "",
     "description": "",
     "tags": [],

@@ -1,18 +1,67 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kubernetes on EKS with Advanced Networking and Service Mesh</title>
+    <title>Container Registry Security with Vulnerability Scanning and Policy Enforcement</title>
     <link>http://localhost:1313/index.html</link>
-    <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a libero nunc. Vivamus vel neque pharetra, faucibus enim et, convallis magna. Sed pulvinar leo vitae tempor euismod. Donec sollicitudin pretium nunc, vitae tincidunt elit cursus in. Integer mollis quam tellus, nec rhoncus massa condimentum ut. Aenean varius, massa at dapibus facilisis, quam libero malesuada tellus, quis porttitor est magna non nisl. Curabitur id egestas ex. Vestibulum id pharetra nibh. Morbi sed lectus lorem. Proin vel nisl mauris. Fusce quis lectus felis.</description>
+    <description>Workshop description This comprehensive AWS workshop teaches you to build, secure, and monitor containerized applications using modern cloud-native technologies and DevSecOps practices. You’ll create a complete end-to-end secure container pipeline that encompasses vulnerability scanning, policy enforcement, and runtime threat detection.&#xA;Throughout this hands-on workshop, you’ll:&#xA;Build a secure CI/CD pipeline using GitHub Actions that automatically builds, scans, and deploys containerized applications Implement container vulnerability scanning with Amazon ECR’s integrated security features Deploy policy enforcement using Kyverno as a Kubernetes admission controller to prevent insecure workloads Set up runtime threat detection with Falco to monitor and alert on suspicious container behavior Provision and manage Amazon EKS clusters with security best practices Apply DevSecOps principles by integrating security into every stage of the development lifecycle By the end of this workshop, you’ll have a production-ready, security-first container deployment pipeline that automatically prevents vulnerable images from reaching production and detects threats in real-time.</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Posts</title>
-      <link>http://localhost:1313/posts/index.html</link>
+      <title>Introduction</title>
+      <link>http://localhost:1313/introduction/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/index.html</guid>
-      <description>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit…</description>
+      <guid>http://localhost:1313/introduction/index.html</guid>
+      <description>Welcome to this comprehensive AWS workshop where you’ll learn to build, secure, and monitor containerized applications using modern cloud-native technologies. This hands-on workshop will guide you through creating a complete DevSecOps pipeline for Kubernetes applications.&#xA;Amazon Elastic Container Registry (ECR) Amazon Elastic Container Registry (ECR) is a fully managed Docker container registry that makes it easy for developers to store, manage, and deploy Docker container images. ECR is integrated with Amazon EKS and Amazon ECS, simplifying your development to production workflow.</description>
+    </item>
+    <item>
+      <title>Prerequisites</title>
+      <link>http://localhost:1313/prerequisites/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/prerequisites/index.html</guid>
+      <description>Before starting this workshop, you’ll need to install and configure several essential tools that will help you interact with AWS services and Kubernetes clusters. These tools form the foundation for working with containers and AWS resources, especially Amazon EKS.&#xA;AWS CLI The AWS Command Line Interface (CLI) is a unified tool that allows you to manage AWS services from your terminal. You’ll use it to configure your AWS credentials, create and manage AWS resources, and interact with various AWS services throughout this workshop.</description>
+    </item>
+    <item>
+      <title>Create the Project Repository</title>
+      <link>http://localhost:1313/create-project-repository/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/create-project-repository/index.html</guid>
+      <description>Every good project needs a home.&#xA;Go to GitHub (or your preferred Git provider).&#xA;Create a new, public repository. Name it something like secure-container-pipeline.&#xA;Clone the repository to your local machine:&#xA;git clone &lt;your-repository-url&gt; cd secure-container-pipeline</description>
+    </item>
+    <item>
+      <title>Create a Secure, Buildable Application and a CI Workflow</title>
+      <link>http://localhost:1313/create-secure-buildable-application-and-ci-workflow/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/create-secure-buildable-application-and-ci-workflow/index.html</guid>
+      <description>Create the Sample Application and Dockerfile First, we need something to build. We’ll create a very simple Node.js “Hello World” application and a security-conscious Dockerfile.&#xA;In your secure-container-pipeline project directory, create a new folder named app.&#xA;mkdir app cd app Create the Node.js application file app.js:&#xA;# In the &#39;app&#39; directory touch app.js Paste this simple server code into app/app.js:&#xA;// app/app.js const http = require(&#34;http&#34;); const port = 8080; const server = http.createServer((req, res) =&gt; { res.statusCode = 200; res.setHeader(&#34;Content-Type&#34;, &#34;text/plain&#34;); res.end(&#34;Hello, FCJ-ers!\n&#34;); }); server.listen(port, () =&gt; { console.log(`Server running on port ${port}`); }); Create the Dockerfile:</description>
+    </item>
+    <item>
+      <title>Provision the EKS Cluster and Automate Deployment</title>
+      <link>http://localhost:1313/provision-eks-cluster-and-ecr-repository/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/provision-eks-cluster-and-ecr-repository/index.html</guid>
+      <description>Create the EKS Cluster Configuration We will use eksctl to build the cluster. The best practice is to define the cluster in a configuration file, which you can then commit to your Git repository for version control and reproducibility.&#xA;In the root of your project directory, create a new folder named k8s.&#xA;mkdir k8s cd k8s Create a new file named cluster.yaml&#xA;Paste the following content into cluster.yaml. Read the comments to understand what each line does</description>
+    </item>
+    <item>
+      <title>Install and Configure Kyverno as a Cluster Gatekeeper</title>
+      <link>http://localhost:1313/install-and-configure-kyverno-as-cluster-gatekeeper/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/install-and-configure-kyverno-as-cluster-gatekeeper/index.html</guid>
+      <description>Our goal here is to make the cluster self-defending. The pipeline we built is great, but it doesn’t stop someone with kubectl access from manually deploying an insecure container. We will now install a gatekeeper–an admission controller–to enforce our rules on every single workload that tries to run on the cluster.&#xA;Our tool for this is Kyverno. It’s powerful, Kubernetes-native, and the policies are just simple YAML, making it perfect for our project.</description>
+    </item>
+    <item>
+      <title>Install and Test Falco for Runtime Threat Detection</title>
+      <link>http://localhost:1313/install-and-test-falco-for-runtime-threat-detection/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/install-and-test-falco-for-runtime-threat-detection/index.html</guid>
+      <description>We will focus first on the runtime security piece. Our mission is to detect and alert on suspicious activity within our running containers in real-time.&#xA;Our tool for this is Falco, the CNCF open-source standard for cloud-native runtime threat detection. It acts like a security camera that watches system calls and alerts you when a container does something it shouldn’t.&#xA;Install Falco using Helm Just like with Kyverno, Helm is the most straightforward way to deploy Falco and its components.</description>
+    </item>
+    <item>
+      <title>Clean up resources</title>
+      <link>http://localhost:1313/clean-up-resources/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/clean-up-resources/index.html</guid>
+      <description>Overview After completing the workshop, or if you encounter any deployment failures, you should clean up your AWS resources to prevent unnecessary charges. This guide provides step-by-step instructions for properly removing all deployed resources.&#xA;Cleanup Process Follow these steps in the specified order to ensure all resources are properly deleted:&#xA;Step 1: Delete EKS Cluster In your secure-container-pipeline project directory, run the following eksctl command:&#xA;eksctl delete cluster -f k8s/cluster.yaml --wait --disable-nodegroup-eviction --force --parallel 4 Step 2: Delete ECR Repository Run the AWS CLI command in your terminal:</description>
     </item>
   </channel>
 </rss>

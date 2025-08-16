@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tạo Ứng dụng Có thể Build Bảo mật và CI Workflow :: Bảo mật Container Registry với Quét lỗ hổng và Thực thi chính sách</title>
+    <link>http://localhost:1313/vi/create-secure-buildable-application-and-ci-workflow/index.html</link>
+    <description>Tạo Ứng dụng Mẫu và Dockerfile Trước tiên, chúng ta cần một thứ gì đó để build. Chúng ta sẽ tạo một ứng dụng Node.js “Hello World” rất đơn giản và một Dockerfile có ý thức bảo mật.&#xA;Trong thư mục dự án secure-container-pipeline của bạn, tạo một thư mục mới có tên app.&#xA;mkdir app cd app Tạo file ứng dụng Node.js app.js:&#xA;# Trong thư mục &#39;app&#39; touch app.js Dán đoạn code server đơn giản này vào app/app.js:</description>
+    <generator>Hugo</generator>
+    <language>vi-vn</language>
+    <atom:link href="http://localhost:1313/vi/create-secure-buildable-application-and-ci-workflow/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

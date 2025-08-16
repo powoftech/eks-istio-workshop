@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction :: Container Registry Security with Vulnerability Scanning and Policy Enforcement</title>
+    <link>http://localhost:1313/introduction/index.html</link>
+    <description>Welcome to this comprehensive AWS workshop where you’ll learn to build, secure, and monitor containerized applications using modern cloud-native technologies. This hands-on workshop will guide you through creating a complete DevSecOps pipeline for Kubernetes applications.&#xA;Amazon Elastic Container Registry (ECR) Amazon Elastic Container Registry (ECR) is a fully managed Docker container registry that makes it easy for developers to store, manage, and deploy Docker container images. ECR is integrated with Amazon EKS and Amazon ECS, simplifying your development to production workflow.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/introduction/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

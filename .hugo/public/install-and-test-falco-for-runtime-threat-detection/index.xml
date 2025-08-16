@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Install and Test Falco for Runtime Threat Detection :: Container Registry Security with Vulnerability Scanning and Policy Enforcement</title>
+    <link>http://localhost:1313/install-and-test-falco-for-runtime-threat-detection/index.html</link>
+    <description>We will focus first on the runtime security piece. Our mission is to detect and alert on suspicious activity within our running containers in real-time.&#xA;Our tool for this is Falco, the CNCF open-source standard for cloud-native runtime threat detection. It acts like a security camera that watches system calls and alerts you when a container does something it shouldn’t.&#xA;Install Falco using Helm Just like with Kyverno, Helm is the most straightforward way to deploy Falco and its components.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/install-and-test-falco-for-runtime-threat-detection/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

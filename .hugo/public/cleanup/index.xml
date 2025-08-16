@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Clean up resources :: Container Registry Security with Vulnerability Scanning and Policy Enforcement</title>
+    <link>http://localhost:1313/cleanup/index.html</link>
+    <description>Overview After completing the workshop, or if you encounter any deployment failures, you should clean up your AWS resources to prevent unnecessary charges. This guide provides step-by-step instructions for properly removing all deployed resources.&#xA;Clean-up Process</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/cleanup/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

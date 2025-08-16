@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cài đặt và Cấu hình Kyverno như Cluster Gatekeeper :: Bảo mật Container Registry với Quét lỗ hổng và Thực thi chính sách</title>
+    <link>http://localhost:1313/vi/install-and-configure-kyverno-as-cluster-gatekeeper/index.html</link>
+    <description>Mục tiêu của chúng ta ở đây là làm cho cluster tự bảo vệ. Pipeline mà chúng ta đã xây dựng rất tốt, nhưng nó không ngăn chặn ai đó có quyền truy cập kubectl deploy thủ công một container không an toàn. Bây giờ chúng ta sẽ cài đặt một gatekeeper–một admission controller–để thực thi các quy tắc của chúng ta trên mọi workload cố gắng chạy trên cluster.</description>
+    <generator>Hugo</generator>
+    <language>vi-vn</language>
+    <atom:link href="http://localhost:1313/vi/install-and-configure-kyverno-as-cluster-gatekeeper/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

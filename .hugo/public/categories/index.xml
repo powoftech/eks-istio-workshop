@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories :: Kubernetes on EKS with Advanced Networking and Service Mesh</title>
+    <title>Categories :: Container Registry Security with Vulnerability Scanning and Policy Enforcement</title>
     <link>http://localhost:1313/categories/index.html</link>
     <description></description>
     <generator>Hugo</generator>

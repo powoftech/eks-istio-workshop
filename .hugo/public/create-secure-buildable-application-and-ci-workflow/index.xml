@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Create a Secure, Buildable Application and a CI Workflow :: Container Registry Security with Vulnerability Scanning and Policy Enforcement</title>
+    <link>http://localhost:1313/create-secure-buildable-application-and-ci-workflow/index.html</link>
+    <description>Create the Sample Application and Dockerfile First, we need something to build. We’ll create a very simple Node.js “Hello World” application and a security-conscious Dockerfile.&#xA;In your secure-container-pipeline project directory, create a new folder named app.&#xA;mkdir app cd app Create the Node.js application file app.js:&#xA;# In the &#39;app&#39; directory touch app.js Paste this simple server code into app/app.js:&#xA;// app/app.js const http = require(&#34;http&#34;); const port = 8080; const server = http.createServer((req, res) =&gt; { res.statusCode = 200; res.setHeader(&#34;Content-Type&#34;, &#34;text/plain&#34;); res.end(&#34;Hello, FCJ-ers!\n&#34;); }); server.listen(port, () =&gt; { console.log(`Server running on port ${port}`); }); Create the Dockerfile:</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/create-secure-buildable-application-and-ci-workflow/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

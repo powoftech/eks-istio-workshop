@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Clean up resources :: Container Registry Security with Vulnerability Scanning and Policy Enforcement</title>
+    <link>http://localhost:1313/clean-up-resources/index.html</link>
+    <description>Overview After completing the workshop, or if you encounter any deployment failures, you should clean up your AWS resources to prevent unnecessary charges. This guide provides step-by-step instructions for properly removing all deployed resources.&#xA;Cleanup Process Follow these steps in the specified order to ensure all resources are properly deleted:&#xA;Step 1: Delete EKS Cluster In your secure-container-pipeline project directory, run the following eksctl command:&#xA;eksctl delete cluster -f k8s/cluster.yaml --wait --disable-nodegroup-eviction --force --parallel 4 Step 2: Delete ECR Repository Run the AWS CLI command in your terminal:</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/clean-up-resources/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

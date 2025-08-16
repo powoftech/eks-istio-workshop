@@ -7,13 +7,13 @@ defaultContentLanguage = 'en'
   [languages.en]
     languageCode = 'en-us'
     languageName = 'English'
-    title = 'Kubernetes on EKS with Advanced Networking and Service Mesh'
+    title = 'Container Registry Security with Vulnerability Scanning and Policy Enforcement'
     weight = 1
 
   [languages.vi]
     languageCode = 'vi-vn'
     languageName = 'Tiếng Việt'
-    title = 'Kubernetes trên EKS với Networking Chuyên sâu và Service Mesh'
+    title = 'Bảo mật Container Registry với Quét lỗ hổng và Thực thi chính sách'
     weight = 2
 
 [params]

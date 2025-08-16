@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Create the Project Repository :: Container Registry Security with Vulnerability Scanning and Policy Enforcement</title>
+    <link>http://localhost:1313/create-project-repository/index.html</link>
+    <description>Every good project needs a home.&#xA;Go to GitHub (or your preferred Git provider).&#xA;Create a new, public repository. Name it something like secure-container-pipeline.&#xA;Clone the repository to your local machine:&#xA;git clone &lt;your-repository-url&gt; cd secure-container-pipeline</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/create-project-repository/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
